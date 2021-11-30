@@ -1,0 +1,21 @@
+.homepageBG{
+    background-image: url(../../assets/Homepage/homepage_bg_desktop/homepage_bg@3x.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; 
+    width:100vw;
+    height:923px;
+}
+
+
+
+
+
+@media screen and (max-width: 576px) {
+    .homepageBG{
+        background-image: url(../../assets/Homepage/homepage_bg_mobile/homepage_mobile_bg@3x.jpg);
+        width:100vw;
+        height:1200px
+    }
+}
