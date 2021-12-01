@@ -1,0 +1,22 @@
+.navBar{
+    background-color:black;
+    opacity:.7;
+    
+}
+
+.navLink{
+    padding-left:25px !important;
+    padding-right:25px !important;
+    color:white!important;
+}
+
+.togglerIcon{
+    color:white!important
+}
+
+@media only screen and (min-width:768px) and (max-width:1024px){
+    .navLink{
+        padding-left:10px!important;
+        padding-right:10px!important;
+    }
+}

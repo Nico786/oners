@@ -1,13 +1,19 @@
 import React from 'react';
-import styles from "./HomePage.module.css"
+import { Container, Col, Row } from 'react-bootstrap';
+
+import NavBar from '../NavBar/NavBar';
+
+import styles from "./HomePage.module.css";
 
 const HomePage = (props) => {
     return (
-        <section className={styles.homepageBG} >
-            <div className="container-fluid">
-                <h1>TEST</h1>
-            </div>
-        </section>
+        <Container fluid className={styles.homepageBG} >
+            <header>
+                <Row>
+                    <NavBar />
+                </Row>
+            </header>
+        </Container>
     )
 }
 
