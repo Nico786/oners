@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Col, Row } from 'react-bootstrap';
+import { Container} from 'react-bootstrap';
 
 import NavBar from '../NavBar/NavBar';
 
@@ -9,9 +9,7 @@ const HomePage = (props) => {
     return (
         <Container fluid className={styles.homepageBG} >
             <header>
-                <Row>
-                    <NavBar />
-                </Row>
+                <NavBar />
             </header>
         </Container>
     )
