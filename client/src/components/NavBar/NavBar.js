@@ -12,7 +12,7 @@ const NavBar = () => {
             <Row>
                 <Navbar collapseOnSelect fixed="top" expand="lg" className={styles.navBar}>
                     <Col xs={12} lg={4} xl={6} className="d-flex justify-content-center">
-                        <Navbar.Brand href="#home">
+                        <Navbar.Brand href="#homepage">
                             <img src={logoHeader} alt="logo Oners" width="160px" height="65px" className="img-fluid" />
                         </Navbar.Brand>
                     </Col>
@@ -23,10 +23,10 @@ const NavBar = () => {
                         }
                     </Navbar.Toggle>
 
-                    <Col xs={12} lg={8} xl={8}>
+                    <Col xs={12} lg={8} xl={6}>
                         <Navbar.Collapse id='responsive-navbar-nav' className={styles.toggler}>
                             <Nav>
-                                <Nav.Link href="#accueil" className={styles.navLink} onClick={() => setIsOpen(!isOpen)}>Accueil</Nav.Link>
+                                <Nav.Link href="#homepage" className={styles.navLink} onClick={() => setIsOpen(!isOpen)}>Accueil</Nav.Link>
                                 <Nav.Link href="#synopsis" className={styles.navLink} onClick={() => setIsOpen(!isOpen)}>Synopsis</Nav.Link>
                                 <Nav.Link href="#personnages" className={styles.navLink} onClick={() => setIsOpen(!isOpen)}>Personnages</Nav.Link>
                                 <Nav.Link href="#biographie" className={styles.navLink} onClick={() => setIsOpen(!isOpen)}>Biographie</Nav.Link>
