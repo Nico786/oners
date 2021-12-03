@@ -7,11 +7,11 @@ import styles from "./HomePage.module.css";
 
 const HomePage = (props) => {
     return (
-        <Container fluid className={styles.homepageBG} >
+        <section className={styles.homepageBG} >
             <header>
                 <NavBar />
             </header>
-        </Container>
+        </section>
     )
 }
 
