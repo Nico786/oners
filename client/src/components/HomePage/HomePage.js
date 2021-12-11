@@ -12,7 +12,7 @@ const HomePage = () => {
         <section className={styles.homepage} id="accueil">
             <Container className="pt-5">
                 <Row className="pt-5 align-items-center">
-                    <Col xs={{span: 12, order: 2}} md={{span:5, order:1}}>
+                    <Col xs={{span: 12, order: 2}} lg={{span:5, order:1}}>
                         <img src={logoOnersColor2x} alt="logo Oners" className={`img-fluid ${styles.logoOnersColor2x}`} />
                         <img src={logoOnersColor3x} alt="logo Oners" className={`img-fluid ${styles.logoOnersColor3x}`} />
                         <Row className="mt-4">
@@ -28,7 +28,7 @@ const HomePage = () => {
                             <p>Face à la puissante société I-CARE, entre guerres de territoires et soif de pouvoirs, peuvent-ils s’impliquer davantage dans un monde qui les dépasse ?</p>
                         </Row>
                     </Col>
-                    <Col xs={{span: 12, order: 1}} md={{span:7, order:2}}>
+                    <Col xs={{span: 12, order: 1}} lg={{span:7, order:2}}>
                         <img src={persosImg2x} alt="personnages principaux oners" className={`img-fluid ${styles.persosImg2x}`} />
                         <img src={persosImg3x} alt="personnages principaux oners" className={`img-fluid ${styles.persosImg3x}`} />
                     </Col>
