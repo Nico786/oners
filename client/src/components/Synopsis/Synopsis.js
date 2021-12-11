@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from "./Synospis.module.css";
+import styles from "./Synopsis.module.css";
 import { Container, Row, Col } from 'react-bootstrap';
 
 import gasMaskImg from "../../assets/img/Synopsis/gasMask.png"
@@ -12,7 +12,7 @@ const Synopsis = () => {
         <section id="synopsis" className={styles.synopsisBg}>
             <Container className="pt-5">
                 <Row className="align-items-center">
-                    <Col xs={{span:12, order:2}} lg={{span:6, order:1}}>
+                    <Col xs={{span:12, order:2}} lg={{span:6, order:1}} className="text-center">
                         <img src={gasMaskImg}
                             srcset={`${gasMaskImgx2} 2x", ${gasMaskImgx3} 3x`}
                             alt="masque à gaz"

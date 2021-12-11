@@ -3,8 +3,8 @@ import { Container, Row, Col, Button } from 'react-bootstrap';
 
 import logoOnersColor2x from "../../assets/img/Homepage/logos/logo_oners_color@2x.png";
 import logoOnersColor3x from "../../assets/img/Homepage/logos/logo_oners_color@3x.png";
-import persosImg2x from "../../assets/img/Homepage/persos/homepage_group_perso_desktop/homepage_group_perso_desktop@2x.png"
-import persosImg3x from "../../assets/img/Homepage/persos/homepage_group_perso_desktop/homepage_group_perso_desktop@3x.png"
+import persosImg2x from "../../assets/img/Homepage/Persos/homepage_group_perso_desktop/homepage_group_perso_desktop@2x.png"
+import persosImg3x from "../../assets/img/Homepage/Persos/homepage_group_perso_desktop/homepage_group_perso_desktop@3x.png"
 import styles from "./HomePage.module.css";
 
 const HomePage = () => {

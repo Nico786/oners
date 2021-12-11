@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Navbar, Nav, Col, Row, Container } from 'react-bootstrap';
-import logoHeader from '../../assets/img/Homepage/logos/logo_header@3x.png';
+import logoHeader from '../../assets/img/Homepage/logos/logo_header.png';
 
 import styles from './NavBar.module.css';
 
@@ -14,7 +14,9 @@ const NavBar = () => {
                 <Row className={styles.rowLogos}>
                     <Col xs={12} lg={4} xl={6}>
                         <Navbar.Brand href="#homepage" className="me-0">
-                            <img src={logoHeader} alt="logo Oners" width="160px" height="65px" className="img-fluid" />
+                            <img src={logoHeader}
+                             alt="logo Oners"
+                             width="160px"/>
                         </Navbar.Brand>
                         <Navbar.Toggle aria-controls="responsive-navbar-nav" onClick={() => setIsOpen(!isOpen)}>
                             {!isOpen ?
