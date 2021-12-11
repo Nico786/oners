@@ -1,0 +1,33 @@
+.synopsisBg{
+    background-image: url("../../assets/img/Synopsis/background/desktop/synopsis_bg_desktop@1x.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; 
+    width:100vw;
+    height:auto;
+}
+
+.synopsisH1{
+    color:white;
+}
+
+@media only screen and (max-width:425px){
+    .synopsisBg{
+        background-image:url("../../assets/img/Synopsis/background/Mobile/synopsis_bg_mobile@1x.jpg");
+    }
+}
+
+@media only screen and (min-width:768px) and (max-width:992px){
+    #gasMask{
+    width:80% !important;
+    margin-left:15%;
+    margin-right:20%;
+}
+}
+
+@media screen and (min-width: 1440px) {
+    .synopsisBg{
+        background-image:url("../../assets/img/Synopsis/background/desktop/synopsis_bg_desktop@3x.jpg");
+    }
+}
