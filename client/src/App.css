@@ -11,4 +11,16 @@
 
 body{
     font-family: "Avenir", Helvetica, sans-serif;
+    font-size:18px;
+}
+
+body p{
+    color:white;
+}
+
+@media only screen and (min-width:768px) and (max-width:1024px){
+    body{
+        font-size:16px;
+        line-height:1.5;
+    }
 }

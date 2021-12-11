@@ -1,14 +1,9 @@
-*{
-    font-size:20px;
-}
-
 .navBar{
-    background-color:rgba(0, 0, 0, 0.4);
-    padding:0px;
+    background-color:rgba(0, 0, 0, 0.7);
 }
 
-.navbar-brand{
-    padding-right:0 !important;
+.rowLogos{
+    width:100%;
 }
 
 .navLink{
@@ -37,23 +32,33 @@ button {
     .img-fluid{
         position:relative;
     }
+    .rowLogos{
+       margin-left:auto;
+       margin-right:auto;
+       text-align: center;
+       --bs-gutter-x: 0;
+    }
 
     .togglerIcon{
         color:white!important;
         width:30px;
         height:30px;
         position:absolute;
-        top:30px;
-        right:40px;
+        top:32px;
+        right:35px;
     }
 
     .navLink{
         color:white!important;
         font-weight:bolder;
         opacity: 1!important;
-        margin-left: auto;
-        margin-right:auto;
+        margin: 10px auto;
         position:relative;
+        padding: 0px !important;
+    }
+
+    .navLink:first-child{
+        margin-top: 30px;
     }
 
     .navLink:focus{
@@ -68,13 +73,23 @@ button {
         background-image: url('../../assets/icons/select.png');
         background-repeat: no-repeat;
         position:absolute;
-        top:17px;
+        top:10px;
         left:-40px;
     }
 }
 
  @media only screen and (min-width:992px){
      .navLink{
-         padding-left: 25px!important;
+         margin:0px 10px !important;
+         padding-top:0px !important;
+         padding-bottom: 0px !important
+     }
+
+     .rowLogos{
+         align-items: center;
+     }
+
+     .rowLogos .toggler{
+         justify-content: right;
      }
  }

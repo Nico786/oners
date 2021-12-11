@@ -1,19 +1,112 @@
-.homepageBG{
-    background-image: url("../../assets/img/Homepage/homepage_bg_desktop/homepage_bg@3x.jpg");
+.homepage{
+    background-image: url("../../assets/img/Homepage/background/homepage_bg_desktop/homepage_bg@2x.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     background-attachment: fixed; 
     width:100vw;
-    height:923px;
+    height:auto;
 }
 
+.persosImg3x{
+    display:none;
+}
 
-@media screen and (max-width: 576px) {
-    .homepageBG{
-        background-image: url("../../assets/img/Homepage/homepage_bg_mobile/homepage_mobile_bg@3x.jpg");
-        width:100vw;
-        height:1200px;
+.logoOnersColor3x{
+    display:none;
+}
+
+.btnHomePage{
+    width:100%;
+    color:black;
+    border-color: white;
+    font-weight: bolder;
+    position: relative;
+}
+
+#btnSynopsis{
+    background-color: white;
+}
+
+#btnPersos{
+    background-color:#D1E3ED;
+}
+
+.btnHomePage:hover{
+    border-color: black;
+    color:black;
+    background-color: white
+}
+
+#btnSynopsis::before{
+    content:'';
+    display:inline-block;
+    width:30px;
+    height:30px;
+    background-image: url('../../assets/icons/book@2x.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    position:absolute;
+    top:3px;
+    left:10px;
+}
+
+#btnPersos::before{
+    content:'';
+    display:inline-block;
+    width:30px;
+    height:30px;
+    background-image: url('../../assets/icons/ID@2x.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    position:absolute;
+    top:3px;
+    left:10px;
+}
+
+.btnHomePage:focus{
+    box-shadow: none;
+    outline:none;
+    color:black;
+}
+
+@media screen and (max-width: 425px) {
+    .homepage{
+        background-image: url("../../assets/img/Homepage/background/homepage_bg_mobile/homepage_mobile_bg@3x.jpg");
         background-position: top;
-    }
+    };
+};
+
+@media screen and (min-width: 1440px) {
+    .homepage{
+        background-image: url("../../assets/img/Homepage/background/homepage_bg_desktop/homepage_bg@3x.jpg");
+    };
+
+    .persosImg2x{
+        display:none;
+    };
+
+    .persosImg3x{
+        display:block
+    };
+    
+    .logoOnersColor2x{
+        display:none
+    };
+
+    .logoOnersColor3x{
+        display:block;
+    };
+
+    #btnSynopsis::before{
+        background-image: url('../../assets/icons/book@3x.png');
+    };
+
+    #btnPersos::before{
+        background-image: url('../../assets/icons/ID@3x.png');
+    };
+    
 }
+
