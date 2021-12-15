@@ -2,7 +2,7 @@ import './App.css';
 
 import { TextProvider } from './contexts/textContext';
 import NavBar from "./components/NavBar/NavBar";
-import HomePage from "./components/HomePage/HomePage";
+import Landing from "./components/Landing/Landing";
 import Synopsis from "./components/Synopsis/Synopsis";
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
           <NavBar />
         </header>
         <main>
-          <HomePage />
+          <Landing />
           <Synopsis />
         </main>
       </div>

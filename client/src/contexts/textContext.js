@@ -8,9 +8,11 @@ export const TextProvider = (props) => {
 
     useEffect(() => {
         axios.get('http://www.localhost:4000/text')
-            .then(res => setText(res.data)) 
+            .then(res =>setText(res.data)) 
             .catch(err => console.log(err))
     },[]); 
+
+    if(!text.length) return null;
 
     return (
         <TextContext.Provider value={[text, setText]}>

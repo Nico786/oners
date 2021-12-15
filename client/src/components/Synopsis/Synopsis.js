@@ -10,8 +10,8 @@ import gasMaskImgx3 from "../../assets/img/Synopsis/gasMask@3x.png";
 
 const Synopsis = () => {
     const [text, setText] = useContext(TextContext);
-    /*   console.log(text[0].content[1]);
-      const textBloc = text[0].content; */
+    console.log(text[0]);
+    const textSection = text[0]['content'];
 
     return (
         <section id="synopsis" className={styles.synopsisBg}>
@@ -30,23 +30,7 @@ const Synopsis = () => {
                             <h1 className={`${styles.synopsisH1} mb-3`}>Synopsis</h1>
                         </Row>
                         <Row>
-                            {/*  {textBloc.map((textBloc) => <p>{textBloc}</p>)} */}
-
-                            <p>
-                                Kaval et Jonps sont deux lycéens en quête de sens. Kaval se débrouille, deale un peu et sort parfois la nuit pour graffer. Jonps, plutôt geek, peint surtout dans ses cahiers.
-                            </p>
-                            <p>
-                                Lors d'une techno-parade qui finit en émeute, ils se retrouvent impliqués dans un conflit entre l-CARE, une multinationale high-tech spécialisée dans les humains augmentés, et un groupe de graffeurs souhaitant libérer 412-L, une adolescente conçue dans leurs laboratoires.
-                            </p>
-                            <p>
-                                Ces graffeurs, d'abord méfiants, embarquent Kaval et Jonps. Ils remarquent ensuite le potentiel de nos héros et décident de leur dévoiler l'existence d'un monde dans lequel se trouvent des entités (les Reflets) capables de transmettre leurs capacités à certains humains (les Porteurs).
-                            </p>
-                            <p>
-                                Quelques jours plus tard, alors qu'il est agressé par un groupe d’inconnus, Jonps développe une vitesse et une puissance hors du commun. On devine qu'un Reflet de nature obscure l'a choisi comme Porteur.
-                            </p>
-                            <p>
-                                Contacté par Nicolas Suez, ingénieur en chef d'I-CARE, Kaval apprend qu'il possède le pouvoir unique du Passeur. Entraîné par un Porteur travaillant pour Suez, il risque à son insu de servir les intérêts de ce puissant mégalomane en lui ouvrant un passage vers le monde des Reflets.
-                            </p>
+                            {textSection.map((textBloc, id) => <p key={id}>{textBloc}</p>)}
                         </Row>
                     </Col>
                 </Row>
