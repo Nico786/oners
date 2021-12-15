@@ -1,15 +1,15 @@
 import React from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 
-import logoOnersColor2x from "../../assets/img/Homepage/logos/logo_oners_color@2x.png";
-import logoOnersColor3x from "../../assets/img/Homepage/logos/logo_oners_color@3x.png";
-import persosImg2x from "../../assets/img/Homepage/Persos/homepage_group_perso_desktop/homepage_group_perso_desktop@2x.png"
-import persosImg3x from "../../assets/img/Homepage/Persos/homepage_group_perso_desktop/homepage_group_perso_desktop@3x.png"
-import styles from "./HomePage.module.css";
+import logoOnersColor2x from "../../assets/img/Landing/logos/logo_oners_color@2x.png";
+import logoOnersColor3x from "../../assets/img/Landing/logos/logo_oners_color@3x.png";
+import persosImg2x from "../../assets/img/Landing/Persos/landing_group_perso_desktop/landing_group_perso_desktop@2x.png"
+import persosImg3x from "../../assets/img/Landing/Persos/landing_group_perso_desktop/landing_group_perso_desktop@3x.png"
+import styles from "./Landing.module.css";
 
-const HomePage = () => {
+const Landing = () => {
     return (
-        <section className={styles.homepage} id="accueil">
+        <section className={styles.landing} id="accueil">
             <Container className="pt-5">
                 <Row className="pt-5 align-items-center">
                     <Col xs={{ span: 12, order: 2 }} lg={{ span: 5, order: 1 }}>
@@ -22,14 +22,14 @@ const HomePage = () => {
                         <Row className="mt-4">
                             <Col xs={12} xl={6} >
                                 <Button href="#synopsis"
-                                    className={`${styles.btnHomePage} mb-4`}
+                                    className={`${styles.btnLanding} mb-4`}
                                     id={styles.btnSynopsis}>
                                     <span>Synopsis</span>
                                 </Button>
                             </Col>
                             <Col xs={12} xl={6}>
                                 <Button href="#personnages"
-                                    className={`${styles.btnHomePage} mb-4`}
+                                    className={`${styles.btnLanding} mb-4`}
                                     id={styles.btnPersos}>
                                     <span>Les personnages</span>
                                 </Button>
@@ -54,4 +54,4 @@ const HomePage = () => {
     )
 }
 
-export default HomePage;
+export default Landing;

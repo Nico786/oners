@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Navbar, Nav, Col, Row, Container } from 'react-bootstrap';
-import logoHeader from '../../assets/img/Homepage/logos/logo_header.png';
+import logoHeader from '../../assets/img/Landing/logos/logo_header.png';
 
 import styles from './NavBar.module.css';
 
@@ -13,7 +13,7 @@ const NavBar = () => {
             <Container>
                 <Row className={styles.rowLogos}>
                     <Col xs={12} lg={4} xl={6}>
-                        <Navbar.Brand href="#homepage" className="me-0">
+                        <Navbar.Brand href="#landing" className="me-0">
                             <img src={logoHeader}
                              alt="logo Oners"
                              width="160px"/>

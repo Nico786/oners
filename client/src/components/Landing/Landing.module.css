@@ -1,5 +1,5 @@
-.homepage{
-    background-image: url("../../assets/img/Homepage/background/homepage_bg_desktop/homepage_bg@2x.jpg");
+.landing{
+    background-image: url("../../assets/img/Landing/background/landing_bg_desktop/landing_bg@2x.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -16,7 +16,7 @@
     display:none;
 }
 
-.btnHomePage{
+.btnLanding{
     width:100%;
     color:black;
     border-color: white;
@@ -32,7 +32,7 @@
     background-color:#D1E3ED;
 }
 
-.btnHomePage:hover{
+.btnLanding:hover{
     border-color: black;
     color:black;
     background-color: white
@@ -66,22 +66,22 @@
     left:10px;
 }
 
-.btnHomePage:focus{
+.btnLanding:focus{
     box-shadow: none;
     outline:none;
     color:black;
 }
 
 @media screen and (max-width: 425px) {
-    .homepage{
-        background-image: url("../../assets/img/Homepage/background/homepage_bg_mobile/homepage_mobile_bg@3x.jpg");
+    .landing{
+        background-image: url("../../assets/img/Landing/background/landing_bg_mobile/landing_mobile_bg@3x.jpg");
         background-position: top;
     };
 };
 
 @media screen and (min-width: 1440px) {
-    .homepage{
-        background-image: url("../../assets/img/Homepage/background/homepage_bg_desktop/homepage_bg@3x.jpg");
+    .landing{
+        background-image: url("../../assets/img/Landing/background/landing_bg_desktop/landing_bg@3x.jpg");
     };
 
     .persosImg2x{
