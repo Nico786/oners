@@ -23,8 +23,8 @@ app.get('/', (req, res) => {
     res.send("Hello World");
 })
 
-const textRouter = require('./routes/textRoute');
-app.use('/text', textRouter);
+const sectionsRouter = require('./routes/sectionsRoute');
+app.use('/sections', sectionsRouter);
 
 app.listen(port, () => {
     console.log(`Server started on port ${port}`)
