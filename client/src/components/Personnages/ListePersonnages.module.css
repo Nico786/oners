@@ -1,0 +1,21 @@
+.personnagesBg{
+    background-image: url("../../assets/img/Personnages/background/desktop/Section_perso_bg@2x.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; 
+    width:100vw;
+    height:auto;
+}
+
+.personnagesH1{
+    color:black;
+    font-weight: bolder;
+}
+
+@media only screen and (max-width:425px){
+    .personnagesBg{
+        background-image:url("../../assets/img/Personnages/background/mobile/Section_perso_bg@2x.jpg");
+        background-position:top;
+    }
+}
