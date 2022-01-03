@@ -1,9 +1,9 @@
 const express = require('express');
 const router = express.Router();
-const Texts = require("../models/textSchema");
+const Sections = require("../models/sectionSchema");
 
 router.get('/', (req,res) =>{
-    Texts.find()
+    Sections.find()
     .then(text => res.json(text))
     .catch(err => res.status(400).json(`error: ${err}`))
 })

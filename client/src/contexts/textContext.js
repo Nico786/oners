@@ -7,7 +7,7 @@ export const TextProvider = (props) => {
     const [text, setText] = useState([]);
 
     useEffect(() => {
-        axios.get('http://www.localhost:4000/section')
+        axios.get('/section')
             .then(res =>setText(res.data)) 
             .catch(err => console.log(err))
     },[]); 

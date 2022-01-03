@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/static/css/main.c18d19b9.chunk.css",
+    "main.js": "/static/js/main.2dadd165.chunk.js",
+    "main.js.map": "/static/js/main.2dadd165.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.776c1e0d.js",
+    "runtime-main.js.map": "/static/js/runtime-main.776c1e0d.js.map",
+    "static/js/2.76501b95.chunk.js": "/static/js/2.76501b95.chunk.js",
+    "static/js/2.76501b95.chunk.js.map": "/static/js/2.76501b95.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.c18d19b9.chunk.css.map": "/static/css/main.c18d19b9.chunk.css.map",
+    "static/js/2.76501b95.chunk.js.LICENSE.txt": "/static/js/2.76501b95.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/static/media/AvenirLTStd-Book.813557df.otf",
+    "static/media/ListePersonnages.module.css": "/static/media/Section_perso_bg@2x.997986ba.jpg",
+    "static/media/gasMask.215d5708.png": "/static/media/gasMask.215d5708.png",
+    "static/media/gasMask@2x.8c3cc1c0.png": "/static/media/gasMask@2x.8c3cc1c0.png",
+    "static/media/gasMask@3x.0fbae7da.png": "/static/media/gasMask@3x.0fbae7da.png",
+    "static/media/Landing.module.css": "/static/media/landing_mobile_bg@3x.70b616a3.jpg",
+    "static/media/landing_group_perso_desktop@2x.554d87e0.png": "/static/media/landing_group_perso_desktop@2x.554d87e0.png",
+    "static/media/landing_group_perso_desktop@3x.be33e821.png": "/static/media/landing_group_perso_desktop@3x.be33e821.png",
+    "static/media/logo_header.99187977.png": "/static/media/logo_header.99187977.png",
+    "static/media/logo_oners_color@2x.44cc876a.png": "/static/media/logo_oners_color@2x.44cc876a.png",
+    "static/media/logo_oners_color@3x.5a86b468.png": "/static/media/logo_oners_color@3x.5a86b468.png",
+    "static/media/Synopsis.module.css": "/static/media/synopsis_bg_mobile@1x.b6f47231.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.776c1e0d.js",
+    "static/js/2.76501b95.chunk.js",
+    "static/css/main.c18d19b9.chunk.css",
+    "static/js/main.2dadd165.chunk.js"
+  ]
+}
