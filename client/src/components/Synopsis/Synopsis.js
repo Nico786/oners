@@ -1,7 +1,7 @@
 import { React, useState, useContext } from 'react';
 import styles from "./Synopsis.module.css";
 import { Container, Row, Col } from 'react-bootstrap';
-import { TextContext } from '../../contexts/textContext';
+import { sectionContext } from '../../contexts/sectionContext.js';
 
 import gasMaskImg from "../../assets/img/Synopsis/gasMask.png"
 import gasMaskImgx2 from "../../assets/img/Synopsis/gasMask@2x.png";
@@ -9,9 +9,11 @@ import gasMaskImgx3 from "../../assets/img/Synopsis/gasMask@3x.png";
 
 
 const Synopsis = () => {
-    const [text, setText] = useContext(TextContext);
-    console.log(text[0]);
-    const textSection = text[0]['content'];
+    const [section, setSection] = useContext(sectionContext);
+    console.log(section.data);
+    console.log(section[0]);
+    const sectionTextContent = section[0]['textContent'];
+    
 
     return (
         <section id="synopsis" className={styles.synopsisBg}>
@@ -30,10 +32,11 @@ const Synopsis = () => {
                             <h1 className={`${styles.synopsisH1} mb-3`}>Synopsis</h1>
                         </Row>
                         <Row>
-                            {textSection.map((textBloc, id) => <p key={id}>{textBloc}</p>)}
+                            {sectionTextContent.map((textBloc, id) => <p key={id}>{textBloc}</p>)}
                         </Row>
                     </Col>
                 </Row>
+                {/* <Button onClick -> envoie requete post avec axios.post (verifier) ensuite reponse -> si success on envoie message succes/> */}
             </Container>
         </section>
     )

@@ -4,7 +4,7 @@ const Section = require("../models/sectionSchema");
 
 
 // Getting all
-router.get('/', async (req, res) => {
+router.get('/v1', async (req, res) => {
     try {
         const sections = await Section.find();
         res.json(sections);
@@ -15,12 +15,12 @@ router.get('/', async (req, res) => {
 })
 
 // Getting one by id
-router.get('/:id', getSection, (req, res) => {
+router.get('/v1/:id', getSection, (req, res) => {
     res.send(res.section);
 })
 
 // Creating one
-router.post('/', async (req, res) => {
+router.post('/v1', async (req, res) => {
     const section = new Section({
         name : req.body.name,
         textContent : req.body.textContent
@@ -36,7 +36,7 @@ router.post('/', async (req, res) => {
 
 
 // Updating one by id
-router.patch('/:id', getSection, async (req, res) => {
+router.patch('/v1/:id', getSection, async (req, res) => {
     if (req.body.name != null) {
         res.section.name = req.body.name;
     }
@@ -53,7 +53,7 @@ router.patch('/:id', getSection, async (req, res) => {
 })
 
 // Deleting one by id
-router.delete('/:id', getSection, async (req, res) => {
+router.delete('/v1/:id', getSection, async (req, res) => {
     try {
         await res.section.remove();
         res.json({ message: 'Deleted section'});
