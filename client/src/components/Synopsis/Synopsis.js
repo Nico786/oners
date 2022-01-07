@@ -1,7 +1,7 @@
 import { React, useState, useContext } from 'react';
 import styles from "./Synopsis.module.css";
 import { Container, Row, Col } from 'react-bootstrap';
-import { TextContext } from '../../contexts/textContext';
+import { SectionContext } from '../../contexts/sectionContext';
 
 import gasMaskImg from "../../assets/img/Synopsis/gasMask.png"
 import gasMaskImgx2 from "../../assets/img/Synopsis/gasMask@2x.png";
@@ -9,8 +9,8 @@ import gasMaskImgx3 from "../../assets/img/Synopsis/gasMask@3x.png";
 
 
 const Synopsis = () => {
-    const [text, setText] = useContext(TextContext);
-    const textSection = text[0]['sections'][1]['text']
+    const [section, setSection] = useContext(SectionContext);
+    const textSection = section[1].textContent;
 
     return (
         <section id="synopsis" className={styles.synopsisBg}>
@@ -29,7 +29,7 @@ const Synopsis = () => {
                             <h1 className={`${styles.synopsisH1} mb-3`}>Synopsis</h1>
                         </Row>
                         <Row>
-                            {textSection.map((textBloc, id) => <p key={id}>{textBloc}</p>)}
+                        {textSection.map((textParagraph, id) => <p key={id}>{textParagraph}</p>)}
                         </Row>
                     </Col>
                 </Row>

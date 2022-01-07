@@ -1,7 +1,14 @@
 const mongoose = require('mongoose');
 
 const SectionSchema = mongoose.Schema({
-    sections: [Object]
+    name: {
+        type: String,
+        required: true
+    },
+    textContent: {
+        type: Array,
+        required: true
+    }
 });
 
 const Section = mongoose.model('Section', SectionSchema)

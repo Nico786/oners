@@ -1,7 +1,7 @@
 import { React, useState, useContext } from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 
-import { TextContext } from '../../contexts/textContext';
+import { SectionContext } from '../../contexts/sectionContext';
 
 import logoOnersColor2x from "../../assets/img/Landing/logos/logo_oners_color@2x.png";
 import logoOnersColor3x from "../../assets/img/Landing/logos/logo_oners_color@3x.png";
@@ -10,8 +10,8 @@ import persosImg3x from "../../assets/img/Landing/Persos/landing_group_perso_des
 import styles from "./Landing.module.css";
 
 const Landing = () => {
-    const [text, setText] = useContext(TextContext);
-    const textSection = text[0]['sections'][0]['text'];
+    const [section, setSection] = useContext(SectionContext);
+    const textSection = section[0].textContent;
 
     return (
         <section className={styles.landing} id="accueil">
@@ -41,7 +41,7 @@ const Landing = () => {
                             </Col>
                         </Row>
                         <Row >
-                        {textSection.map((textBloc, id) => <p key={id}>{textBloc}</p>)}
+                        {textSection.map((textParagraph, id) => <p key={id}>{textParagraph}</p>)}
                         </Row>
                     </Col>
                     <Col xs={{ span: 12, order: 1 }} lg={{ span: 7, order: 2 }}>

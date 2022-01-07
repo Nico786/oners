@@ -28,8 +28,11 @@ app.get('/', (req, res) => {
     res.send("Hello World");
 })
 
-const sectionRouter = require('./routes/sectionRoute');
-app.use('/section', sectionRouter);
+const sectionsRouter = require('./routes/sectionsRoute');
+app.use('/sections', sectionsRouter);
+
+const personnagesRouter = require("./routes/personnagesRoute");
+app.use("/personnages", personnagesRouter);
 
 // AFTER defining routes: Anything that doesn't match what's above, send back index.html; (the beginning slash ('/') in the string is important!)
 app.get('*', (req, res) => {

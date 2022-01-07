@@ -1,26 +1,29 @@
 import './App.css';
 
-import { TextProvider } from './contexts/textContext';
+import { SectionProvider } from './contexts/sectionContext';
 import NavBar from "./components/NavBar/NavBar";
 import Landing from "./components/Landing/Landing";
 import Synopsis from "./components/Synopsis/Synopsis";
 import ListePersonnages from "./components/Personnages/ListePersonnages";
+import { PersonnageProvider } from './contexts/personnageContext';
 
 function App() {
 
   return (
-    <TextProvider>
-      <div className="App">
-        <header>
-          <NavBar />
-        </header>
-        <main>
+    <div className="App">
+      <header>
+        <NavBar />
+      </header>
+      <main>
+        <SectionProvider>
           <Landing />
           <Synopsis />
-          <ListePersonnages/>
-        </main>
-      </div>
-    </TextProvider>
+        </SectionProvider>
+        <PersonnageProvider>
+          <ListePersonnages />
+        </PersonnageProvider>
+      </main>
+    </div>
   );
 }
 
