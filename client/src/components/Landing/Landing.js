@@ -1,4 +1,4 @@
-import { React, useState, useContext } from 'react';
+import { React, useContext } from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 
 import { SectionContext } from '../../contexts/sectionContext';

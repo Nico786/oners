@@ -12,7 +12,7 @@ router.get("/", async (req, res) => {
   }
 });
 
-// Getting one by id
+/* // Getting one by id
 router.get("/:id", getSection, (req, res) => {
   res.send(res.section);
 });
@@ -71,5 +71,5 @@ async function getSection(req, res, next) {
   res.section = section;
   next();
 }
-
+ */
 module.exports = router;

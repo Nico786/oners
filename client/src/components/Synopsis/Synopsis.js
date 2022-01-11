@@ -1,4 +1,4 @@
-import { React, useState, useContext } from 'react';
+import { React, useContext } from 'react';
 import styles from "./Synopsis.module.css";
 import { Container, Row, Col } from 'react-bootstrap';
 import { SectionContext } from '../../contexts/sectionContext';
