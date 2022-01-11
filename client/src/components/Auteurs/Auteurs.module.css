@@ -8,16 +8,15 @@
     height:auto;
 };
 
-
-@media screen and (max-width: 425px) {
+@media only screen and (max-width: 425px) {
     .auteursBg{
-        background-image: url("../../assets/img/Auteurs/background/mobile/section_auteurs_bg_mobile.png");
+        background-image: url("../../assets/img/Auteurs/background/mobile/section_bio_mobile.png"); 
         background-position: top;
     };
 };
 
-@media screen and (min-width: 1440px) {
-    .landing{
+@media only screen and (min-width: 1440px) {
+    .auteurBg{
         background-image: url("../../assets/img/Auteurs/background/desktop/section_bio_bg@3x.png");
     };
 }

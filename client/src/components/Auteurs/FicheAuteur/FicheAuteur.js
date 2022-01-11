@@ -1,21 +1,31 @@
 import React from 'react';
 import { Row, Col } from "react-bootstrap";
 
+const FicheAuteur = ({ name, job, description }) => {
 
-import Morgan from "../../../assets/img/Auteurs/morgan/morgan.png";
-import Justin from "../../../assets/img/Auteurs/justin/justin.png";
+    /* let imgSrc = require(`../../../assets/img/Auteurs/${name}.png`).default;
+    let grafSrc = require(`../../../assets/img/Auteurs/graf_${name}.png`).default; */
 
+    /* require.context() */
 
-const FicheAuteur = ({name, job, description}) => {
     return (
         <Col>
-            <Row>
-                <Col>
-                    <img src={Morgan} alt={name}/>
+            <Row className="my-3">
+                <Col xs={12} md={6}>
+                    <img src={require(`../../../assets/img/Auteurs/${name}.png`).default}
+                        alt={name}
+                        className='img-fluid' />
                 </Col>
                 <Col>
+                    <img src={require(`../../../assets/img/Auteurs/graf_${name}.png`).default}
+                        alt={name}
+                        className='img-fluid py-sm-3 py-md-0' />
                     <p>{job}</p>
-                    <p>{description}</p>
+                    {description.map((textParagraph, id) => {
+                        return (
+                            <p key={id}>{textParagraph}</p>
+                        )
+                    })}
                 </Col>
             </Row>
         </Col>
