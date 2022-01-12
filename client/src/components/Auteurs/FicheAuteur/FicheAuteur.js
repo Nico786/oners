@@ -3,11 +3,6 @@ import { Row, Col } from "react-bootstrap";
 
 const FicheAuteur = ({ name, job, description }) => {
 
-    /* let imgSrc = require(`../../../assets/img/Auteurs/${name}.png`).default;
-    let grafSrc = require(`../../../assets/img/Auteurs/graf_${name}.png`).default; */
-
-    /* require.context() */
-
     return (
         <Col>
             <Row className="my-3">
