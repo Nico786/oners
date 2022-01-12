@@ -1,13 +1,13 @@
 import './App.css';
 
 import { SectionProvider } from './contexts/sectionContext';
-import { PersonnageProvider } from './contexts/personnageContext';
+import { PersonnagesProvider } from './contexts/personnagesContext';
 import { AuteurProvider } from './contexts/auteurContext';
 
 import NavBar from "./components/NavBar/NavBar";
 import Landing from "./components/Landing/Landing";
 import Synopsis from "./components/Synopsis/Synopsis";
-import ListePersonnages from "./components/Personnages/ListePersonnages";
+import Personnages from "./components/Personnages/Personnages";
 import Auteurs from "./components/Auteurs/Auteurs";
 
 
@@ -23,9 +23,9 @@ function App() {
           <Landing />
           <Synopsis />
         </SectionProvider>
-        <PersonnageProvider>
-          <ListePersonnages />
-        </PersonnageProvider>
+        <PersonnagesProvider>
+          <Personnages />
+        </PersonnagesProvider>
         <AuteurProvider>
           <Auteurs />
         </AuteurProvider>
