@@ -12,9 +12,9 @@ const Auteurs = (props) => {
     
     return (
         <section className={styles.auteursBg} id="biographie">
-            <Container className="py-5">
+            <Container>
                 <Row>
-                    <h1 style={{ 'color': 'white' }}>Les auteurs</h1>
+                    <h1 style={{ 'color': 'white' }}>Auteurs</h1>
                 </Row>
                 <Row>
                     {

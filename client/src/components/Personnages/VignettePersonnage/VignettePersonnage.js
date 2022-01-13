@@ -2,7 +2,7 @@ import React from 'react';
 import ModalPersonnage from './ModalPersonnage';
 import useModal from '../../../hooks/useModal';
 
-const VignettePersonnage = ({ name, description }) => {
+const VignettePersonnage = ({ name, description, backgroundColorModal }) => {
     const { isShowing, toggle } = useModal();
 
     return (
@@ -18,7 +18,9 @@ const VignettePersonnage = ({ name, description }) => {
                 isShowing={isShowing}
                 hide={toggle}
                 name={name}
-                description={description}/>
+                description={description}
+                backgroundColorModal={backgroundColorModal}
+                />
         </>
     )
 }

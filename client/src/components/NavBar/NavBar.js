@@ -10,10 +10,10 @@ const NavBar = () => {
     return (
 
         <Navbar collapseOnSelect fixed="top" expand="lg" className={styles.navBar}>
-            <Container className={styles.nav}>
+            <Container>
                 <Row className={styles.rowLogos}>
                     <Col xs={12} lg={4} xl={6}>
-                        <Navbar.Brand href="#accueil" className="me-0">
+                        <Navbar.Brand href="#landing" className="me-0">
                             <img src={logoHeader}
                              alt="logo Oners"
                              width="160px"/>
@@ -28,7 +28,7 @@ const NavBar = () => {
                     <Col xs={12} lg={8} xl={6}>
                         <Navbar.Collapse id='responsive-navbar-nav' className={styles.toggler}>
                             <Nav>
-                                <Nav.Link href="#accueil" className={styles.navLink} onClick={() => setIsOpen(!isOpen)}>Accueil</Nav.Link>
+                                <Nav.Link href="#landing" className={styles.navLink} onClick={() => setIsOpen(!isOpen)}>Accueil</Nav.Link>
                                 <Nav.Link href="#synopsis" className={styles.navLink} onClick={() => setIsOpen(!isOpen)}>Synopsis</Nav.Link>
                                 <Nav.Link href="#personnages" className={styles.navLink} onClick={() => setIsOpen(!isOpen)}>Personnages</Nav.Link>
                                 <Nav.Link href="#biographie" className={styles.navLink} onClick={() => setIsOpen(!isOpen)}>Auteurs</Nav.Link>

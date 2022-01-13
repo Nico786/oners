@@ -24,72 +24,97 @@
 
 .modal{
     z-index: 1000;
-    background: #fff;
     position: relative;
     margin: auto;
     border-radius: 10px;
-    padding:10px;
-    width:50%;
-    height:70%;
+    padding:1em;
+    width:60%;
+    height: fit-content;
+    top: 1rem;
 }
 
 .modalClose{
-    font-size: 1rem;
+    font-size: 1em;
     font-weight: 700;
     color: #000;
     cursor: pointer;
     border: none;
     background: transparent;
+    float: right;
+    padding-top: 0;
 }
 
 #closeBtn{
-    font-size: 20px;
-}
-
-.modalHeader{
-    margin-bottom:20px;
-}
-
-.modalBody{
-    position:relative;
-    padding-left:25px;
+    font-size: 2rem;
 }
 
 .nomPersonnage{
-    font-size:25px;
+    font-size:2rem;
     font-weight: bolder;
-}
-
-.imagePersonnage{
-    position:absolute;
-    height:60%;
 }
 
 .modalBody p, .modalHeader span{
     color:black;
 }
 
-.modalBody>p:first-of-type{
-    font-weight:bolder;
-    font-size:2rem;
-}
-
 .imagePersonnage{
-    z-index:20;
-    position:relative;
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
 }
 
-@media only screen and (max-width: 425px){
-  .modal{
-    width:90%;
-    height:90%;
-  }
-
-  #previous{
+.grafModal{
     display:none;
   }
 
-  .modalClose{
-    float: right;
-  }
+
+@media only screen and (max-width: 576px){
+    .modal{
+      width:90%;
+    }
+}
+
+@media only screen and (min-width: 768px){
+    .grafModal{
+        display: block;
+        margin-left:10%;
+    }
+
+    .modalBody{
+        display: flex;
+        align-items: center;
+    }
+}
+
+@media only screen and (min-width: 992px){
+    .modalBody{
+        position:relative;
+    }
+
+    .imagePersonnage{
+        position:absolute;
+        top:-6rem;
+        width: 30%;
+    }
+
+    .modal{
+        height: 65%;
+    }
+  
+    .grafModal{
+        margin-left:25%;
+        width:60%;
+    }
+}
+
+@media only screen and (min-width: 1200px){
+    .modalBody{
+        position:relative;
+    }
+
+    .imagePersonnage{
+        position:absolute;
+        top:-9rem;
+        width: 30%;
+    }
 }

@@ -5,14 +5,7 @@
     background-position: center;
     background-attachment: fixed; 
     width:100vw;
-}
-
-.persosImg3x{
-    display:none;
-}
-
-.logoOnersColor3x{
-    display:none;
+    padding-top:80px;
 }
 
 .btnLanding{
@@ -71,6 +64,7 @@
     color:black;
 }
 
+
 @media screen and (max-width: 425px) {
     .landing{
         background-image: url("../../assets/img/Landing/background/landing_bg_mobile/landing_mobile_bg@3x.jpg");
@@ -78,31 +72,10 @@
     };
 };
 
-@media only screen and (min-width:992px){
-    .landing{
-        height: 100vh;
-    }
-}
 
 @media screen and (min-width: 1440px) {
     .landing{
         background-image: url("../../assets/img/Landing/background/landing_bg_desktop/landing_bg@3x.jpg");
-    };
-
-    .persosImg2x{
-        display:none;
-    };
-
-    .persosImg3x{
-        display:block
-    };
-    
-    .logoOnersColor2x{
-        display:none
-    };
-
-    .logoOnersColor3x{
-        display:block;
     };
 
     #btnSynopsis::before{

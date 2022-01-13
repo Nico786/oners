@@ -14,7 +14,7 @@
 
 @media only screen and (max-width:425px){
     .personnagesBg{
-        background-image:url("../../assets/img/Personnages/background/mobile/Section_perso_bg@2x.jpg");
+        background-image:url("../../assets/img/Personnages/background/mobile/Section_perso_bg.png");
         background-position:top;
     }
 }

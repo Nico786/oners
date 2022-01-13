@@ -9,6 +9,10 @@ const PersonnageSchema = mongoose.Schema({
     type: String,
     required: true,
   },
+  backgroundColorModal:{
+    type: String,
+    required: true,
+  }
 });
 
 const Personnage = mongoose.model("Personnage", PersonnageSchema);

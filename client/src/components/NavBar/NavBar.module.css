@@ -2,6 +2,10 @@
     background-color:rgba(0, 0, 0, 0.7);
 }
 
+.navBar img{
+    display:inline;
+}
+
 .rowLogos{
     width:100%;
 }
@@ -29,6 +33,10 @@ button {
 }
 
 @media only screen and (max-width:991px){
+    .navBar{
+        background-color:rgba(0, 0, 0, 0.952);
+    }
+
     .img-fluid{
         position:relative;
     }
