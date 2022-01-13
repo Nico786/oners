@@ -16,7 +16,7 @@ const Landing = () => {
     return (
         <section className={styles.landing} id="accueil">
             <Container className="pt-5">
-                <Row className="pt-5 align-items-center">
+                <Row className="align-items-center">
                     <Col xs={{ span: 12, order: 2 }} lg={{ span: 5, order: 1 }}>
                         <img src={logoOnersColor2x}
                             alt="logo Oners"

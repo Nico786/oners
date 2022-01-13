@@ -14,7 +14,7 @@ const Synopsis = () => {
 
     return (
         <section id="synopsis" className={styles.synopsisBg}>
-            <Container className="py-5">
+            <Container className="pt-5">
                 <Row className="align-items-center">
                     <Col xs={{ span: 12, order: 2 }} lg={{ span: 6, order: 1 }} className="text-center">
                         <img src={gasMaskImg}

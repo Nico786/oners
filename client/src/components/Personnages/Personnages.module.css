@@ -5,7 +5,6 @@
     background-position: center;
     background-attachment: fixed; 
     width:100vw;
-    height:auto;
 }
 
 .personnagesH1{
@@ -19,6 +18,7 @@
         background-position:top;
     }
 }
+
 
 
 
