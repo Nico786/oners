@@ -5,7 +5,6 @@
     background-position: center;
     background-attachment: fixed; 
     width:100vw;
-    height:auto;
 }
 
 .persosImg3x{
@@ -78,6 +77,12 @@
         background-position: top;
     };
 };
+
+@media only screen and (min-width:992px){
+    .landing{
+        height: 100vh;
+    }
+}
 
 @media screen and (min-width: 1440px) {
     .landing{
