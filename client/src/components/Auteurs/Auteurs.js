@@ -11,7 +11,7 @@ const Auteurs = (props) => {
     console.log(textAuteur);
     
     return (
-        <section className={styles.auteursBg} id="biographie">
+        <section className={styles.auteursBg} id="auteurs">
             <Container>
                 <Row>
                     <h1 style={{ 'color': 'white' }}>Auteurs</h1>

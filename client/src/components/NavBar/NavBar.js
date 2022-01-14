@@ -31,7 +31,7 @@ const NavBar = () => {
                                 <Nav.Link href="#landing" className={styles.navLink} onClick={() => setIsOpen(!isOpen)}>Accueil</Nav.Link>
                                 <Nav.Link href="#synopsis" className={styles.navLink} onClick={() => setIsOpen(!isOpen)}>Synopsis</Nav.Link>
                                 <Nav.Link href="#personnages" className={styles.navLink} onClick={() => setIsOpen(!isOpen)}>Personnages</Nav.Link>
-                                <Nav.Link href="#biographie" className={styles.navLink} onClick={() => setIsOpen(!isOpen)}>Auteurs</Nav.Link>
+                                <Nav.Link href="#auteurs" className={styles.navLink} onClick={() => setIsOpen(!isOpen)}>Auteurs</Nav.Link>
                                 <Nav.Link href="#contact" className={styles.navLink} onClick={() => setIsOpen(!isOpen)}>Contact</Nav.Link>
                             </Nav>
                         </Navbar.Collapse>

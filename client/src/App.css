@@ -18,9 +18,14 @@ body p{
     color:white;
 }
 
+body main section#contact{
+    padding-bottom:0px;
+}
+
 body main section{
     padding: 80px 0;
 } 
+
 
 @media only screen and (min-width:768px) and (max-width:992px){
     body{
@@ -35,9 +40,24 @@ body main section{
 }
 
  @media only screen and (min-width:992px){
-    body main section{
-        /* height: 100vh; */
+    body main #landing,
+    body main #synopsis,
+    body main #personnages,
+    body main #auteurs
+    {
+        min-height: 100vh;
         display:flex;
         align-items: center;
+    }
+
+    body main #contact{
+        height:90vh;
+        padding-bottom:0;
+        display:flex;
+        align-items: center;
+    }
+
+    main footer{
+        height:10vh
     }
 } 

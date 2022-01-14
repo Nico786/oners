@@ -9,6 +9,8 @@ import Landing from "./components/Landing/Landing";
 import Synopsis from "./components/Synopsis/Synopsis";
 import Personnages from "./components/Personnages/Personnages";
 import Auteurs from "./components/Auteurs/Auteurs";
+import Contact from './components/Contact/Contact';
+import Footer from "./components/Footer/Footer"
 
 
 function App() {
@@ -29,7 +31,11 @@ function App() {
         <AuteurProvider>
           <Auteurs />
         </AuteurProvider>
+        <Contact />
       </main>
+      <footer>
+        <Footer />
+      </footer>
     </div>
   );
 }
