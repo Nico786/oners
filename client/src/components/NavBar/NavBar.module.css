@@ -25,7 +25,7 @@
     height:30px;
 }
 
-button {
+.navBar button {
     outline: none!important;
     box-shadow: none!important;
     border:none!important;

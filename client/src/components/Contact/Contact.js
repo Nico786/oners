@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container, Row, Col } from "react-bootstrap";
+import ContactForm from './ContactForm/ContactForm';
 
 import CrokFullImage from "../../assets/img/Personnages/Crok.png"
 import crokSectionContact from "../../assets/img/Contact/Section_contact_personnage_crok.png"
@@ -30,7 +31,7 @@ const Contact = (props) => {
 
                         </Row>
                         <Row>
-                            CONTACTFORM
+                            <ContactForm/>
                         </Row>
                     </Col>
                     <Col sm={12} lg={{ span: 6, order: 1 }}>

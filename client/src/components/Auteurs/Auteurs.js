@@ -8,7 +8,6 @@ import styles from "./Auteurs.module.css";
 const Auteurs = (props) => {
     const [auteur, setAuteur] = useContext(AuteurContext);
     const textAuteur = auteur;
-    console.log(textAuteur);
     
     return (
         <section className={styles.auteursBg} id="auteurs">

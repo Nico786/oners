@@ -4,15 +4,22 @@
   "private": true,
   "proxy": "http://localhost:4000",
   "dependencies": {
+    "@emailjs/browser": "^3.4.0",
+    "@hookform/error-message": "^2.0.0",
     "@testing-library/jest-dom": "^5.15.1",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
     "axios": "^0.24.0",
+    "dotenv": "^11.0.0",
+    "emailjs-com": "^3.2.0",
     "react": "^17.0.2",
     "react-bootstrap": "^2.0.3",
     "react-dom": "^17.0.2",
+    "react-google-recaptcha": "^2.1.0",
+    "react-hook-form": "^7.24.0",
     "react-router-dom": "^6.0.2",
     "react-scripts": "4.0.3",
+    "react-toastify": "^8.1.0",
     "web-vitals": "^1.1.2"
   },
   "scripts": {

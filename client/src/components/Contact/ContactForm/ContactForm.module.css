@@ -1,0 +1,17 @@
+.formRowContent{
+    background-color: black;
+    color:white;
+    width:100%;
+}
+
+#btnSubmit{
+    background-color: black;
+    color:white;
+    padding:0.3em;
+}
+
+.errorMessage{
+    color:red;
+    font-weight: bolder;
+    padding-top: 0;
+}

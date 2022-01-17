@@ -13,7 +13,6 @@ import styles from "./Personnages.module.css";
 const Personnages = () => {
     const [personnages, setPersonnages] = useContext(PersonnagesContext);
     const textPersonnages = personnages;
-    console.log(textPersonnages);
 
     return (
         <section id="personnages" className={styles.personnagesBg}>
