@@ -5,8 +5,8 @@ import ReCAPTCHA from "react-google-recaptcha";
 import emailjs from 'emailjs-com';
 import { ToastContainer, toast } from 'react-toastify';
 
-import styles from "./ContactForm.module.css"
 import 'react-toastify/dist/ReactToastify.min.css';
+import styles from "./ContactForm.module.css"
 
 const dotenv = require("dotenv");
 dotenv.config();
@@ -14,7 +14,6 @@ dotenv.config();
 const ContactForm = (props) => {
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
     const form = useRef();
-    console.log(errors)
 
     const toastifySuccess = () => {
         toast.success('Message envoyé !', {
@@ -49,10 +48,10 @@ const ContactForm = (props) => {
                 <Row>
                     <Col>
                         <input
+                            className={styles.formRowContent}
                             type="email"
                             name="email"
                             placeholder="Email"
-                            className={`mt-2 py-1 ${styles.formRowContent}`}
                             {...register("email", {
                                 required: 'Email invalide',
                                 pattern: /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
@@ -69,10 +68,10 @@ const ContactForm = (props) => {
                 <Row>
                     <Col>
                         <input
+                            className={styles.formRowContent}
                             type="text"
                             name="subject"
                             placeholder="Sujet"
-                            className={`mt-2 py-1 ${styles.formRowContent}`}
                             {...register("subject", {
                                 required: 'Veuillez indiquer le sujet de votre message',
                             })}
@@ -89,10 +88,10 @@ const ContactForm = (props) => {
                 <Row>
                     <Col>
                         <textarea
+                            className={styles.formRowContent}
                             type="text"
                             name="message"
                             placeholder="Votre message"
-                            className={`${styles.formRowContent} mt-2 py-1`}
                             {...register("message", {
                                 required: 'Veuillez écrire votre message',
                                 minLength: {
