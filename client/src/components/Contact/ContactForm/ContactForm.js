@@ -1,4 +1,5 @@
 import { React, useRef } from 'react';
+import { useState } from 'react';
 import { Row, Col } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import ReCAPTCHA from "react-google-recaptcha";
@@ -13,7 +14,13 @@ dotenv.config();
 
 const ContactForm = (props) => {
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
+    const [disabled, setDisabled] = useState(true);
     const form = useRef();
+    const reCaptchaRef=useRef();
+
+    const handleDisabled = () =>{
+        setDisabled(!disabled)
+    }
 
     const toastifySuccess = () => {
         toast.success('Message envoyé !', {
@@ -27,7 +34,7 @@ const ContactForm = (props) => {
         });
     }
 
-    function sendEmail(e) {
+    const sendEmail = () => {
         emailjs.sendForm(
             `${process.env.REACT_APP_SERVICE_ID}`,
             `${process.env.REACT_APP_TEMPLATE_ID}`,
@@ -113,14 +120,17 @@ const ContactForm = (props) => {
                 </Row>
                 <Row className="text-end">
                     <Col>
-                        {/*    <ReCAPTCHA
-                            sitekey={process.env.REACT_APP_CAPTCHA}
-                        /> */}
+                           <ReCAPTCHA
+                            sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY}
+                            ref={reCaptchaRef}
+                            onChange={handleDisabled}
+                        />
                     </Col>
                     <Col>
                         <button
                             type="submit"
                             value="Envoyer"
+                            disabled={disabled}
                             id={styles.btnSubmit}>
                             Envoyer
                         </button>

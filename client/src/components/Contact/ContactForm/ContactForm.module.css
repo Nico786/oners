@@ -1,4 +1,4 @@
-#btnSubmit{
+button#btnSubmit{
     background-color: black;
     color:white;
     padding:0.3em;
@@ -11,9 +11,9 @@
 }
 
 .formRowContent{
-    background-color: black !important;
-    color:white !important;
-    width:100% !important;
+    background-color: black;
+    color:white;
+    width:100%;
     margin-top:0.5em;
-    padding:0.5em 0;
+    padding:0.5em 0.5em;
 }
