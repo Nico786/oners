@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const Section = require("../models/sectionSchema");
+const Section = require("../../models/sectionSchema");
 
 // Getting all
 router.get("/", async (req, res) => {

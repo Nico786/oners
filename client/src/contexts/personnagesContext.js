@@ -8,7 +8,7 @@ export const PersonnagesProvider = (props) => {
 
   useEffect(() => {
     axios
-      .get("/personnages")
+      .get("/api/v1/personnages")
       .then((res) => setPersonnages(res.data))
       .catch((err) => console.log(err));
   }, []);

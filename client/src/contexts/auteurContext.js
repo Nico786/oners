@@ -8,7 +8,7 @@ export const AuteurProvider = (props) => {
 
   useEffect(() => {
     axios
-      .get("/auteurs")
+      .get("/api/v1/auteurs")
       .then((res) => {
         setAuteur(res.data)})
       .catch((err) => console.log(err));

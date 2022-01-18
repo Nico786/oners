@@ -1,12 +1,12 @@
 const express = require("express");
 const router = express.Router();
-const Auteur = require("../models/auteurSchema");
+const Personnage = require("../../models/personnageSchema");
 
 // Getting all
 router.get("/", async (req, res) => {
   try {
-    const auteurs = await Auteur.find();
-    res.json(auteurs);
+    const personnages = await Personnage.find();
+    res.json(personnages);
   } catch (err) {
     res.status(500).json({ message: err.message });
   }
@@ -14,17 +14,17 @@ router.get("/", async (req, res) => {
 
 // // Getting one by id
 // router.get("/:id", getSection, (req, res) => {
-//   res.send(res.auteur);
+//   res.send(res.personnage);
 // });
 
 // // Creating one
 // router.post("/", async (req, res) => {
-//   const auteur = new Auteur({
+//   const personnage = new Personnage({
 //     name: req.body.name,
 //     textContent: req.body.textContent,
 //   });
 //   try {
-//     const newSection = await auteur.save();
+//     const newSection = await personnage.save();
 //     res.status(201).json(newSection);
 //   } catch (err) {
 //     res.status(400).json({ message: err.message });
@@ -34,13 +34,13 @@ router.get("/", async (req, res) => {
 // // Updating one by id
 // router.patch("/:id", getSection, async (req, res) => {
 //   if (req.body.name != null) {
-//     res.auteur.name = req.body.name;
+//     res.personnage.name = req.body.name;
 //   }
 //   if (req.body.textContent != null) {
-//     res.auteur.textContent = req.auteur.textContent;
+//     res.personnage.textContent = req.personnage.textContent;
 //   }
 //   try {
-//     const updatedSection = await res.auteur.save();
+//     const updatedSection = await res.personnage.save();
 //     res.json(updatedSection);
 //   } catch (err) {
 //     res.status(400).json({ message: err.message });
@@ -50,8 +50,8 @@ router.get("/", async (req, res) => {
 // // Deleting one by id
 // router.delete("/:id", getSection, async (req, res) => {
 //   try {
-//     await res.auteur.remove();
-//     res.json({ message: "Deleted auteur" });
+//     await res.personnage.remove();
+//     res.json({ message: "Deleted personnage" });
 //   } catch (err) {
 //     res.status(500).json({ message: err.message });
 //   }
@@ -59,16 +59,16 @@ router.get("/", async (req, res) => {
 
 // async function getSection(req, res, next) {
 //   // Middleware function
-//   let auteur;
+//   let personnage;
 //   try {
-//     auteur = await Auteur.findById(req.params.id);
-//     if (auteur == null) {
-//       return res.status(404).json({ message: "Cannot find auteur" });
+//     personnage = await Personnage.findById(req.params.id);
+//     if (personnage == null) {
+//       return res.status(404).json({ message: "Cannot find personnage" });
 //     }
 //   } catch (err) {
 //     return res.status(500).json({ message: err.message });
 //   }
-//   res.auteur = auteur;
+//   res.personnage = personnage;
 //   next();
 // }
 
