@@ -1,21 +1,26 @@
 .navBar{
-    background-color:rgba(0, 0, 0, 0.7);
+    background-color:rgba(0, 0, 0, 0.815);
+    z-index:5;
+}
+
+.navLink{
+    color:white !important;
+}
+
+.navLink:hover, .navLink:active, .navLink.active{
+    font-weight: 900!important;
 }
 
 .navBar img{
-    display:inline;
+    display:inline-block;
 }
 
 .rowLogos{
     width:100%;
 }
 
-.navLink{
-    color:white!important;
-}
-
 .toggler{
-    line-height: 50px;
+    line-height: 10vh;
     padding: 0!important;
 }
 
@@ -33,8 +38,8 @@
 }
 
 @media only screen and (max-width:991px){
-    .navBar{
-        background-color:rgba(0, 0, 0, 0.952);
+    .navLink{
+        font-size:1.5rem;
     }
 
     .img-fluid{
@@ -57,9 +62,6 @@
     }
 
     .navLink{
-        color:white!important;
-        font-weight:bolder;
-        opacity: 1!important;
         margin: 10px auto;
         position:relative;
         padding: 0px !important;
@@ -69,13 +71,9 @@
         margin-top: 30px;
     }
 
-    .navLink:focus{
-        text-decoration: underline;
-    }
-
-    .navLink::before{
+  /*   .navLink::before{
         content:'';
-        display:inline-block;
+        display:none;
         width:30px;
         height:30px;
         background-image: url('../../assets/icons/select.png');
@@ -84,6 +82,10 @@
         top:10px;
         left:-40px;
     }
+
+    .navLink:active::before{
+        display:inline-block
+    } */
 }
 
  @media only screen and (min-width:992px){
@@ -99,5 +101,9 @@
 
      .rowLogos .toggler{
          justify-content: right;
+     }
+
+     .navBar{
+        height:80px;
      }
  }

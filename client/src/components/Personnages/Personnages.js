@@ -22,16 +22,18 @@ const Personnages = () => {
                         <h1 className={styles.personnagesH1}>Personnages</h1>
                     </Col>
                     <Col>
-                        <img src={marqueursImg}
-                        srcSet={`${marqueursImg2x} 2x`, `${marqueursImg3x} 3x`}
-                        alt="marqueurs dessins" 
-                        width="150"
+                        <img
+                            src={marqueursImg}
+                            srcSet={`${marqueursImg2x} 2x`, `${marqueursImg3x} 3x`}
+                            alt="marqueurs dessins"
+                            width="150"
+                            id={styles.marqueurs}
                         />
                     </Col>
                 </Row>
                 <Row>
                     {
-                        personnages.map((personnage) => {
+                        textPersonnages.map((personnage) => {
                             return (
                                 <Col key={personnage._id} sm={12} lg={4} className="my-2">
                                     <VignettePersonnage
@@ -43,7 +45,6 @@ const Personnages = () => {
                             )
                         })
                     }
-
                 </Row>
             </Container>
         </section>

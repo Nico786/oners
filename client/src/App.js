@@ -1,10 +1,10 @@
 import './App.css';
 
-import { SectionProvider } from './contexts/sectionContext';
+import { SectionsProvider } from './contexts/sectionsContext';
 import { PersonnagesProvider } from './contexts/personnagesContext';
-import { AuteurProvider } from './contexts/auteurContext';
+import { AuteursProvider } from './contexts/auteursContext';
 
-import NavBar from "./components/NavBar/NavBar";
+import NavBar from './components/NavBar/NavBar';
 import Landing from "./components/Landing/Landing";
 import Synopsis from "./components/Synopsis/Synopsis";
 import Personnages from "./components/Personnages/Personnages";
@@ -16,27 +16,27 @@ import Footer from "./components/Footer/Footer"
 function App() {
 
   return (
-    <div className="App">
+    <>
       <header>
-        <NavBar />
+       <NavBar/>
       </header>
       <main>
-        <SectionProvider>
+        <SectionsProvider>
           <Landing />
           <Synopsis />
-        </SectionProvider>
+        </SectionsProvider>
         <PersonnagesProvider>
           <Personnages />
         </PersonnagesProvider>
-        <AuteurProvider>
+        <AuteursProvider>
           <Auteurs />
-        </AuteurProvider>
+        </AuteursProvider>
         <Contact />
       </main>
       <footer>
         <Footer />
       </footer>
-    </div>
+    </>
   );
 }
 

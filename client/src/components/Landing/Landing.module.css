@@ -1,4 +1,4 @@
-.landing{
+.landingBg{
     background-image: url("../../assets/img/Landing/background/landing_bg_desktop/landing_bg@2x.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -66,7 +66,7 @@
 
 
 @media screen and (max-width: 425px) {
-    .landing{
+    .landingBg{
         background-image: url("../../assets/img/Landing/background/landing_bg_mobile/landing_mobile_bg@3x.jpg");
         background-position: top;
     };
@@ -74,7 +74,7 @@
 
 
 @media screen and (min-width: 1440px) {
-    .landing{
+    .landingBg{
         background-image: url("../../assets/img/Landing/background/landing_bg_desktop/landing_bg@3x.jpg");
     };
 

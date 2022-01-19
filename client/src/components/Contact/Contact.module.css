@@ -12,8 +12,22 @@
     font-weight: bolder;
 }    
 
-#crokFullBodyImg{
-    display:none;
+#crokSectionContact{
+    display: none;
+}
+
+
+@media screen and (max-width: 425px) {
+    .contactBg{
+        background-image: url("../../assets/img/Contact/background/mobile/Section_contact_bg.jpg");
+        background-position: top;
+    };
+};
+
+@media only screen and (max-width: 768px){
+    #panneau{
+        max-width: 50%;
+    }
 }
 
 @media only screen and (min-width: 768px){
@@ -30,39 +44,17 @@
     #contact{
         margin-bottom:-5rem;
     }
-
-    #crokSectionContact{
-        max-width: 80%;
-    }
 }
 
 @media only screen and (min-width: 992px){
-    #crokFullBodyImg{
+    #crokSectionContact{
         display:block;
-        max-width:50%
     }
 
-    #crokSectionContact{
+    #CrokImgMobile{
         display:none;
     }
 }
-
-@media only screen and (max-width: 768px){
-    #panneau{
-        display:block;
-        margin-left:auto;
-        margin-right: auto;
-        max-width: 50%;
-    }
-}
-
-@media screen and (max-width: 425px) {
-    .contactBg{
-        background-image: url("../../assets/img/Contact/background/mobile/Section_contact_bg.jpg");
-        background-position: top;
-    };
-};
-
 
 @media only screen and (min-width: 1200px) {
     .contactBg{

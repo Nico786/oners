@@ -10,9 +10,17 @@ footer ul{
     display:flex;
     list-style-type: none;
     margin-bottom:0;
+    padding-left: 0;
+    justify-content: flex-end;
 }
 
-.footerPage{
-    display:flex;
-    align-items:center
+@media only screen and (max-width: 992px){
+    footer ul{
+        justify-content: space-between;
+    }
+}
+@media only screen and (min-width: 992px){
+    footer ul li{
+        margin-left: 2em;
+    }
 }

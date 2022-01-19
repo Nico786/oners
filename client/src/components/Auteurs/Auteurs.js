@@ -1,19 +1,21 @@
 import { React, useContext } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import { AuteurContext } from "../../contexts/auteurContext";
+import { AuteursContext } from "../../contexts/auteursContext";
 import FicheAuteur from "./FicheAuteur/FicheAuteur";
 
 import styles from "./Auteurs.module.css";
 
 const Auteurs = (props) => {
-    const [auteur, setAuteur] = useContext(AuteurContext);
-    const textAuteur = auteur;
-    
+    const [auteurs, setAuteurs] = useContext(AuteursContext);
+    const textAuteur = auteurs;
+
     return (
         <section className={styles.auteursBg} id="auteurs">
             <Container>
                 <Row>
-                    <h1 style={{ 'color': 'white' }}>Auteurs</h1>
+                    <Col>
+                        <h1 style={{ 'color': 'white' }}>Auteurs</h1>
+                    </Col>
                 </Row>
                 <Row>
                     {

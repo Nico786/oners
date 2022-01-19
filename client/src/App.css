@@ -12,6 +12,7 @@
 body{
     font-family: "Avenir", Helvetica, sans-serif;
     font-size:1rem;
+    position:relative;
 }
 
 body p{
@@ -31,7 +32,8 @@ body main section{
     body{
         line-height:1.5;
     }
-
+}
+@media only screen and (max-width:992px){
     body img{
         display: block;
         margin-left: auto;
@@ -39,25 +41,22 @@ body main section{
     }
 }
 
- @media only screen and (min-width:992px){
+@media only screen and (min-width:992px){
     body main #landing,
     body main #synopsis,
-    body main #personnages,
-    body main #auteurs
+    body main #contact
     {
-        min-height: 100vh;
+        max-height: 80%;
         display:flex;
         align-items: center;
     }
-
-    body main #contact{
-        height:90vh;
-        padding-bottom:0;
-        display:flex;
-        align-items: center;
+    
+    body main #personnages,
+    body main #auteurs{
+        min-height: 80%;
     }
 
     main footer{
-        height:10vh
+        max-height:20%
     }
 } 

@@ -1,0 +1,38 @@
+.customModal p{
+    color:black;
+}
+
+.customModal span{
+    font-weight: 800;
+    font-size: 2rem;
+    color:black
+}
+
+#grafName{
+    display:none;
+}
+
+@media only screen and (min-width: 576px){
+    .customModal{
+        padding:0 1rem;
+    }
+
+    #grafName{
+        display: block;
+    }
+
+    #imgPersonnage{
+        position:absolute;
+        top:-60px;
+        right: 40px;
+        z-index:1000;
+        max-width:35% 
+    }
+}
+
+@media only screen and (min-width: 768px){
+    .customModal{
+        padding:0 3rem;
+    }
+}
+

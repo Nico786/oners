@@ -4,6 +4,7 @@ import { Row, Col } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import ReCAPTCHA from "react-google-recaptcha";
 import emailjs from 'emailjs-com';
+import { init } from '@emailjs/browser';
 import { ToastContainer, toast } from 'react-toastify';
 
 import 'react-toastify/dist/ReactToastify.min.css';
@@ -12,23 +13,30 @@ import styles from "./ContactForm.module.css"
 const dotenv = require("dotenv");
 dotenv.config();
 
+init(process.env.REACT_APP_USER_ID);
+
 const ContactForm = (props) => {
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
     const [disabled, setDisabled] = useState(true);
     const form = useRef();
-    const reCaptchaRef=useRef();
+    const reCaptchaRef = useRef();
 
-    const handleDisabled = () =>{
+    const handleDisabled = () => {
         setDisabled(!disabled)
     }
+
+    const reCaptchaLoaded = () =>{
+        console.log("recaptcha loaded")
+    }
+    window.reCaptchaLoaded = reCaptchaLoaded();
 
     const toastifySuccess = () => {
         toast.success('Message envoyé !', {
             position: "bottom-center",
             autoClose: 1500,
-            hideProgressBar: false,
+            hideProgressBar: true,
             closeOnClick: true,
-            pauseOnHover: true,
+            pauseOnHover: false,
             draggable: false,
             progress: undefined,
         });
@@ -55,7 +63,7 @@ const ContactForm = (props) => {
                 <Row>
                     <Col>
                         <input
-                            className={styles.formRowContent}
+                            className={styles.formRow}
                             type="email"
                             name="email"
                             placeholder="Email"
@@ -75,7 +83,7 @@ const ContactForm = (props) => {
                 <Row>
                     <Col>
                         <input
-                            className={styles.formRowContent}
+                            className={styles.formRow}
                             type="text"
                             name="subject"
                             placeholder="Sujet"
@@ -95,10 +103,11 @@ const ContactForm = (props) => {
                 <Row>
                     <Col>
                         <textarea
-                            className={styles.formRowContent}
+                            className={styles.formRow}
                             type="text"
                             name="message"
                             placeholder="Votre message"
+                            rows={5}
                             {...register("message", {
                                 required: 'Veuillez écrire votre message',
                                 minLength: {
@@ -106,7 +115,6 @@ const ContactForm = (props) => {
                                     message: 'Votre message doit contenir 20 caractères minimum'
                                 }
                             })}
-                            rows={5}
                         >
                         </textarea>
                         {
@@ -118,20 +126,21 @@ const ContactForm = (props) => {
 
                     </Col>
                 </Row>
-                <Row className="text-end">
+                <Row>
                     <Col>
-                           <ReCAPTCHA
+                        <ReCAPTCHA
                             sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY}
                             ref={reCaptchaRef}
                             onChange={handleDisabled}
+                            asyncScriptOnLoad={reCaptchaLoaded}
                         />
                     </Col>
-                    <Col>
+                    <Col md={3}>
                         <button
                             type="submit"
                             value="Envoyer"
                             disabled={disabled}
-                            id={styles.btnSubmit}>
+                            className={styles.formRow}>
                             Envoyer
                         </button>
                     </Col>
@@ -140,13 +149,13 @@ const ContactForm = (props) => {
             <ToastContainer
                 position="bottom-center"
                 autoClose={1500}
-                hideProgressBar={false}
+                hideProgressBar
                 newestOnTop={false}
                 closeOnClick
                 rtl={false}
-                pauseOnFocusLoss={false}
+                pauseOnFocusLoss
                 draggable={false}
-                pauseOnHover
+                pauseOnHover={false}
             />
         </Col>
     )
