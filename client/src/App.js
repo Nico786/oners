@@ -1,3 +1,5 @@
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import './App.css';
 
 import { SectionsProvider } from './contexts/sectionsContext';
@@ -10,7 +12,8 @@ import Synopsis from "./components/Synopsis/Synopsis";
 import Personnages from "./components/Personnages/Personnages";
 import Auteurs from "./components/Auteurs/Auteurs";
 import Contact from './components/Contact/Contact';
-import Footer from "./components/Footer/Footer"
+import Footer from "./components/Footer/Footer";
+import Admin from './components/Admin/Admin';
 
 
 function App() {
@@ -18,9 +21,12 @@ function App() {
   return (
     <>
       <header>
-       <NavBar/>
+        <NavBar />
       </header>
       <main>
+        <Route exact path="/admin">
+          <Admin />
+        </Route>
         <SectionsProvider>
           <Landing />
           <Synopsis />
