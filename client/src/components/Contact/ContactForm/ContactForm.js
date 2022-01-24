@@ -1,8 +1,7 @@
-import { React, useRef } from 'react';
+import { React, useEffect, useRef } from 'react';
 import { useState } from 'react';
 import { Row, Col } from "react-bootstrap";
 import { useForm } from "react-hook-form";
-import ReCAPTCHA from "react-google-recaptcha";
 import emailjs from 'emailjs-com';
 import { init } from '@emailjs/browser';
 import { ToastContainer, toast } from 'react-toastify';
@@ -19,16 +18,17 @@ const ContactForm = (props) => {
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
     const [disabled, setDisabled] = useState(true);
     const form = useRef();
-    const reCaptchaRef = useRef();
 
     const handleDisabled = () => {
         setDisabled(!disabled)
     }
 
-    const reCaptchaLoaded = () =>{
-        console.log("recaptcha loaded")
-    }
-    window.reCaptchaLoaded = reCaptchaLoaded();
+    useEffect(() => {
+        const script = document.createElement('script');
+        script.src = "https://www.google.com/recaptcha/api.js";
+        window.onsubmit = () => { handleDisabled() }
+        document.body.appendChild(script)
+    }, [])
 
     const toastifySuccess = () => {
         toast.success('Message envoyé !', {
@@ -128,12 +128,10 @@ const ContactForm = (props) => {
                 </Row>
                 <Row>
                     <Col>
-                        <ReCAPTCHA
-                            sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY}
-                            ref={reCaptchaRef}
-                            onChange={handleDisabled}
-                            asyncScriptOnLoad={reCaptchaLoaded}
-                        />
+                        <div className='g-recaptcha'
+                            data-sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY}
+                            data-callback="onsubmit">
+                        </div>
                     </Col>
                     <Col md={3}>
                         <button
