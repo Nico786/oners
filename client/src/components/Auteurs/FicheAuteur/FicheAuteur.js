@@ -1,5 +1,6 @@
 import React from 'react';
 import { Row, Col } from "react-bootstrap";
+import parse from "html-react-parser";
 
 import styles from './FicheAuteur.module.css'
 
@@ -25,11 +26,7 @@ const FicheAuteur = ({ name, job, description }) => {
                         {job}
                     </p>
                     {
-                        description.map((textParagraph, id) => {
-                            return (
-                                <p key={id}>{textParagraph}</p>
-                            )
-                        })
+                        parse(description)
                     }
                 </Col>
             </Row>

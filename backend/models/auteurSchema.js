@@ -10,7 +10,7 @@ const AuteurSchema = mongoose.Schema({
     required: true,
   },
   description: {
-    type: Array,
+    type: String,
     required: true,
   },
 });

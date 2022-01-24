@@ -1,0 +1,31 @@
+GET http://localhost:4000/api/v1/personnagestest
+###
+GET http://localhost:4000/api/v1/personnages/61d7fe0c85645fded645312d
+###
+POST http://localhost:4000/api/v1/personnagestest
+Content-Type: application/json
+
+{
+	"nom": "testx",
+	"desc": "mdxxxxxxxxxxxxxxx",
+	"bg": "ptdx"
+}
+
+###
+PUT http://localhost:4000/api/v1/personnagestest/61f2b4119a5fbcb90b07bf5d
+Content-Type: application/json
+
+{
+	"desc": "mdxx"
+}
+
+###
+DELETE http://localhost:4000/api/v1/cacas/61f01747606a5d5248fd2074
+
+###
+PUT http://localhost:4000/api/v1/personnagestest/61f2b4119a5fbcb90b07bf5d
+Content-Type: application/json
+
+{
+	"desc": "mdxx"
+}

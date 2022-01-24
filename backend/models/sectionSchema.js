@@ -6,7 +6,7 @@ const SectionSchema = mongoose.Schema({
         required: true
     },
     textContent: {
-        type: Array,
+        type: String,
         required: true
     }
 });

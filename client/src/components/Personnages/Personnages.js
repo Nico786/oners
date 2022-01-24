@@ -1,6 +1,7 @@
 import { React, useContext } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { PersonnagesContext } from "../../contexts/personnagesContext";
+import parse from "html-react-parser";
 import VignettePersonnage from "./VignettePersonnage/VignettePersonnage";
 
 import marqueursImg from '../../assets/img/Personnages/marqueurs.png';
@@ -38,7 +39,7 @@ const Personnages = () => {
                                 <Col key={personnage._id} sm={12} lg={4} className="my-2">
                                     <VignettePersonnage
                                         name={personnage.name}
-                                        description={personnage.description}
+                                        description={parse(personnage.description)}
                                         backgroundColorModal={personnage.backgroundColorModal}
                                     />
                                 </Col>

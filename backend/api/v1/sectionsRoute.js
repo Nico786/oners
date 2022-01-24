@@ -12,7 +12,7 @@ router.get("/", async (req, res) => {
   }
 });
 
-/* // Getting one by id
+// Getting one by id
 router.get("/:id", getSection, (req, res) => {
   res.send(res.section);
 });
@@ -37,7 +37,22 @@ router.patch("/:id", getSection, async (req, res) => {
     res.section.name = req.body.name;
   }
   if (req.body.textContent != null) {
-    res.section.textContent = req.section.textContent;
+    res.section.textContent = req.body.textContent;
+  }
+  try {
+    const updatedSection = await res.section.save();
+    res.json(updatedSection);
+  } catch (err) {
+    res.status(400).json({ message: err.message });
+  }
+});
+
+router.put("/:id", getSection, async (req, res) => {
+  if (req.body.name != null) {
+    res.section.name = req.body.name;
+  }
+  if (req.body.textContent != null) {
+    res.section.textContent = req.body.textContent;
   }
   try {
     const updatedSection = await res.section.save();
@@ -71,5 +86,5 @@ async function getSection(req, res, next) {
   res.section = section;
   next();
 }
- */
+
 module.exports = router;

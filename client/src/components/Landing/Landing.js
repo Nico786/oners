@@ -1,5 +1,6 @@
 import { React, useContext } from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
+import parse from 'html-react-parser';
 
 import { SectionsContext } from '../../contexts/sectionsContext';
 
@@ -50,8 +51,7 @@ const Landing = () => {
                         </Row>
                         <Row >
                             {
-                                textSection.map((textParagraph, id) =>
-                                    <p key={id}>{textParagraph}</p>)
+                                parse(textSection)
                             }
                         </Row>
                     </Col>
