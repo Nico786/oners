@@ -16,7 +16,7 @@
     position: relative;
 }
 
-#btnSynopsis{
+#showNewsletterPopUp{
     background-color: white;
 }
 
@@ -30,7 +30,7 @@
     background-color: white
 }
 
-#btnSynopsis::before{
+#showNewsletterPopUp::before{
     content:'';
     display:inline-block;
     width:30px;
@@ -78,7 +78,7 @@
         background-image: url("../../assets/img/Landing/background/landing_bg_desktop/landing_bg@3x.jpg");
     };
 
-    #btnSynopsis::before{
+    #showNewsletterPopUp::before{
         background-image: url('../../assets/icons/book@3x.png');
     };
 

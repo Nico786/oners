@@ -33,10 +33,9 @@ const Landing = () => {
                         <Row className="mt-4">
                             <Col sm={12} xl={6} >
                                 <Button
-                                    href="#synopsis"
                                     className={`${styles.btnLanding} mb-4`}
-                                    id={styles.btnSynopsis}>
-                                    <span>Synopsis</span>
+                                    id={styles.showNewsletterPopUp}>
+                                    <span>Newsletter</span>
                                 </Button>
                             </Col>
                             <Col sm={12} xl={6}>
