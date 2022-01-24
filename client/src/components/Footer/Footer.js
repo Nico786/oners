@@ -14,7 +14,7 @@ const Footer = (props) => {
     return (
         <Container>
             <Row id={styles.footerPage} className='align-items-center'>
-                <Col xs={12} sm={6} className="text-center text-md-start my-2">
+                <Col xs={12} sm={6} className="text-center text-md-start mt-0 mb-2">
                     <span> &copy; Copyright 2022 | oners-bd.fr</span>
                 </Col>
                 <Col>

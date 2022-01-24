@@ -67,7 +67,7 @@
 
 @media screen and (max-width: 425px) {
     .landingBg{
-        background-image: url("../../assets/img/Landing/background/landing_bg_mobile/landing_mobile_bg@3x.jpg");
+        background-image: url("../../assets/img/Landing/background/landing_bg_mobile/landing_mobile_bg.jpg");
         background-position: top;
     };
 };

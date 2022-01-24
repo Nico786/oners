@@ -1,6 +1,6 @@
 import { React, useEffect, useRef } from 'react';
 import { useState } from 'react';
-import { Row, Col } from "react-bootstrap";
+import { Row, Col, Spinner } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import emailjs from 'emailjs-com';
 import { init } from '@emailjs/browser';
@@ -17,10 +17,14 @@ init(process.env.REACT_APP_USER_ID);
 const ContactForm = (props) => {
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
     const [disabled, setDisabled] = useState(true);
+    const [isLoading, setIsLoading] = useState(false)
     const form = useRef();
 
     const handleDisabled = () => {
         setDisabled(!disabled)
+    }
+    const handleIsLoading = () =>{
+        setIsLoading(!isLoading)
     }
 
     useEffect(() => {
@@ -50,6 +54,7 @@ const ContactForm = (props) => {
             `${process.env.REACT_APP_USER_ID}`)
             .then((result) => {
                 console.log(result.text);
+                handleIsLoading();
                 toastifySuccess();
             }, (error) => {
                 console.log(error.text);
@@ -138,8 +143,14 @@ const ContactForm = (props) => {
                             type="submit"
                             value="Envoyer"
                             disabled={disabled}
-                            className={styles.formRow}>
-                            Envoyer
+                            className={styles.formRow}
+                            onClick={handleIsLoading}>
+                            {isLoading ?
+                                <Spinner animation="border" role="status">
+                                    <span className="visually-hidden">Envoi...</span>
+                                </Spinner>
+                                : "Envoyer"
+                            }
                         </button>
                     </Col>
                 </Row>
