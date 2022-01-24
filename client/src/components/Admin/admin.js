@@ -12,8 +12,11 @@ import { ListGuesser, EditGuesser } from "react-admin";
 import { fetchJson as httpClient } from "./httpClient";
 import { SectionList, SectionEdit } from "./sections";
 
-const dataProvider = myDataProvider("http://localhost:4000", httpClient);
-const Admin = () => (
+import "./Admin.css"
+
+const dataProvider = myDataProvider("http://localhost:4000/api/v1", httpClient);
+
+const BackOffice = () => (
   <Admin dashboard={Dashboard} dataProvider={dataProvider}>
     {
       /* <Resource name="posts" list={PostList} edit={PostEdit} create={PostCreate} icon={PostIcon} />
@@ -23,4 +26,4 @@ const Admin = () => (
   </Admin>
 );
 
-export default Admin;
+export default BackOffice;

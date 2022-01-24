@@ -17,6 +17,7 @@ init(process.env.REACT_APP_USER_ID);
 const ContactForm = (props) => {
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
     const [disabled, setDisabled] = useState(true);
+    const [isLoading, setIsLoading] = useState(false)
     const form = useRef();
 
     const handleDisabled = () => {
@@ -140,7 +141,9 @@ const ContactForm = (props) => {
                             disabled={disabled}
                             className={styles.formRow}>
                             Envoyer
+                           
                         </button>
+                        
                     </Col>
                 </Row>
             </form>
