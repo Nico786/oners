@@ -39,13 +39,13 @@
     </script>
   <script id="mcjs">
     window.onload = function showPopUp() {
-      !function (c, h, i, m, p) {
+      var btn = document.querySelector("#landing [type=button]");
+      btn.onclick = () => !function (c, h, i, m, p) {
         m = c.createElement(h), p = c.getElementsByTagName(h)[0], m.async = 1, m.src = i, p.parentNode.insertBefore(m, p)
-      }(document, "script", "https://chimpstatic.com/mcjs-connected/js/users/6e7d7d41c9f61e90ab7040232/e1fceb79948502095362e3a4e.js");
+      }(document, "script", `https://chimpstatic.com/mcjs-connected/js/users/%REACT_APP_UUID%/%REACT_APP_LID%.js`);
       document.cookie = "MCPopupClosed=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
       document.cookie = "MCPopupSubscribed=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
     }
-    document.getElementById("showNewsletterPopUp").onclick = function () { showPopup(); }
   </script>
 </body>
 
