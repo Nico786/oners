@@ -1,0 +1,31 @@
+GET http://localhost:4000/api/v1/cacas
+###
+GET http://localhost:4000/api/v1/cacas/61f0152086e82e560bc561bb
+###
+POST http://localhost:4000/api/v1/cacas
+Content-Type: application/json
+
+{
+	"nom": "testx",
+	"contenu" : "mdx"
+}
+
+###
+PATCH http://localhost:4000/api/v1/cacas/61f12f259787c55bfdc5a390
+Content-Type: application/json
+
+{
+	"name": "megatest"
+}
+
+###
+DELETE http://localhost:4000/api/v1/cacas/61f01747606a5d5248fd2074
+
+###
+PUT http://localhost:4000/api/v1/cacas/61f12f259787c55bfdc5a390
+Content-Type: application/json
+
+{
+	"nom": "lol",
+	"contenu": "zbi"
+}

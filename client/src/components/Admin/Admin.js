@@ -11,6 +11,7 @@ import UserIcon from "@material-ui/icons/Group";
 import { ListGuesser, EditGuesser } from "react-admin";
 import { fetchJson as httpClient } from "./httpClient";
 import { SectionList, SectionEdit } from "./sections";
+import { CacaList, CacaEdit } from "./cacas";
 
 import "./Admin.css"
 
@@ -19,9 +20,8 @@ const dataProvider = myDataProvider("http://localhost:4000/api/v1", httpClient);
 const BackOffice = () => (
   <Admin dashboard={Dashboard} dataProvider={dataProvider}>
     {
-      /* <Resource name="posts" list={PostList} edit={PostEdit} create={PostCreate} icon={PostIcon} />
-    <Resource name="users" list={UserList} icon={UserIcon} /> */
-      <Resource name="sections" list={SectionList} edit={SectionEdit} />
+      // <Resource name="sections" list={SectionList} edit={SectionEdit} />
+      <Resource name="cacas" list={CacaList} edit={CacaEdit} />
     }
   </Admin>
 );

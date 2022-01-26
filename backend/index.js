@@ -37,6 +37,12 @@ app.use("/api/v1/personnages", personnagesRouter);
 const auteursRouter = require("./api/v1/auteursRoute");
 app.use("/api/v1/auteurs", auteursRouter);
 
+const cacasRouter = require("./api/v1/cacasRoute");
+app.use("/api/v1/cacas", cacasRouter);
+
+// const subscribersRouter = require("./api/v1/cacas");
+// app.use("/api/v1/cacas", subscribersRouter);
+
 // AFTER defining routes: Anything that doesn't match what's above, send back index.html; (the beginning slash ('/') in the string is important!)
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname + '/../client/build/index.html'))
