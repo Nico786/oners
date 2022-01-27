@@ -1,5 +1,6 @@
 import { React, useContext } from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
+import parse from 'html-react-parser';
 
 import { SectionsContext } from '../../contexts/sectionsContext';
 
@@ -14,7 +15,7 @@ import styles from "./Landing.module.css";
 
 const Landing = () => {
     const [sections, setSections] = useContext(SectionsContext);
-    const textSection = sections[0].textContent;
+    const textSection = sections[0].contenu;
 
     return (
         <section className={styles.landingBg} id="landing">
@@ -50,8 +51,7 @@ const Landing = () => {
                         </Row>
                         <Row >
                             {
-                                textSection.map((textParagraph, id) =>
-                                    <p key={id}>{textParagraph}</p>)
+                                parse(textSection)
                             }
                         </Row>
                     </Col>

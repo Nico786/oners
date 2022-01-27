@@ -1,6 +1,9 @@
 import { React, useContext } from 'react';
-import styles from "./Synopsis.module.css";
 import { Container, Row, Col } from 'react-bootstrap';
+import parse from 'html-react-parser';
+
+import styles from "./Synopsis.module.css";
+
 import { SectionsContext } from '../../contexts/sectionsContext';
 
 import gasMaskImg from "../../assets/img/Synopsis/gasMask.png"
@@ -10,7 +13,7 @@ import gasMaskImgx3 from "../../assets/img/Synopsis/gasMask@3x.png";
 
 const Synopsis = () => {
     const [sections, setSections] = useContext(SectionsContext);
-    const textSection = sections[1].textContent;
+    const textSection = sections[1].contenu;
 
     return (
         <section id="synopsis" className={styles.synopsisBg}>
@@ -21,11 +24,7 @@ const Synopsis = () => {
                         <Row>
                             <Col>
                                 {
-                                    textSection.map((textParagraph, id) =>
-                                        <p key={id}>
-                                            {textParagraph}
-                                        </p>
-                                    )
+                                    parse(textSection)
                                 }
                             </Col>
                         </Row>

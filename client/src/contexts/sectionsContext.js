@@ -7,7 +7,7 @@ export const SectionsProvider = (props) => {
     const [sections, setSections] = useState([]);
 
     useEffect(() => {
-        axios.get('/api/v1/sections')
+        axios.get('/api/v1/cacas')
             .then(res => setSections(res.data)) 
             .catch(err => console.log(err))
     },[]); 

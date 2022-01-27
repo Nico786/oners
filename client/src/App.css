@@ -13,9 +13,10 @@ body{
     font-family: "Avenir", Helvetica, sans-serif;
     font-size:1rem;
     position:relative;
+    color:white;
 }
 
-body p{
+section#landing p, section#synopsis p, section#auteurs p{
     color:white;
 }
 
