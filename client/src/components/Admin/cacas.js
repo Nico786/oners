@@ -52,7 +52,7 @@ export const CacaList = (props) => (
 );
 
 export const CacaEdit = (props) => (
-  <Edit {...props}>
+  <Edit name={<CacaName />} {...props}>
     <SimpleForm>
       <TextInput disabled label="Id" source="id" />
       <TextInput source="nom" validation={{ required: true }} />
@@ -96,14 +96,11 @@ export const CacaEdit = (props) => (
 //   </Edit>
 // );
 
-export const PostCreate = (props) => (
-  <Create {...props}>
+export const CacaCreate = (props) => (
+  <Create name={<CacaName />} {...props}>
     <SimpleForm>
-      <ReferenceInput source="userId" reference="users">
-        <SelectInput optionText="name" />
-      </ReferenceInput>
-      <TextInput source="title" />
-      <TextInput multiline source="body" />
+      <TextInput source="nom" validation={{ required: true }} />
+      <RichTextInput source="contenu" validation={{ required: true }} />
     </SimpleForm>
   </Create>
 );

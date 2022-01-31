@@ -1,31 +1,31 @@
-GET http://localhost:4000/api/v1/cacas
+GET http://localhost:4000/api/v1/personnagestest
 ###
-GET http://localhost:4000/api/v1/cacas/61f0152086e82e560bc561bb
+GET http://localhost:4000/api/v1/personnages/61d7fe0c85645fded645312d
 ###
-POST http://localhost:4000/api/v1/cacas
+POST http://localhost:4000/api/v1/personnagestest
 Content-Type: application/json
 
 {
 	"nom": "testx",
-	"contenu" : "mdx"
+	"desc": "mdxxxxxxxxxxxxxxx",
+	"bg": "ptdx"
 }
 
 ###
-PATCH http://localhost:4000/api/v1/cacas/61f12f259787c55bfdc5a390
+PUT http://localhost:4000/api/v1/personnagestest/61f2b4119a5fbcb90b07bf5d
 Content-Type: application/json
 
 {
-	"name": "megatest"
+	"desc": "mdxx"
 }
 
 ###
 DELETE http://localhost:4000/api/v1/cacas/61f01747606a5d5248fd2074
 
 ###
-PUT http://localhost:4000/api/v1/cacas/61f12f259787c55bfdc5a390
+PUT http://localhost:4000/api/v1/personnagestest/61f2b4119a5fbcb90b07bf5d
 Content-Type: application/json
 
 {
-	"nom": "lol",
-	"contenu": "zbi"
+	"desc": "mdxx"
 }

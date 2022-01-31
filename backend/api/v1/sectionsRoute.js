@@ -20,8 +20,8 @@ router.get("/:id", getSection, (req, res) => {
 // Creating one
 router.post("/", async (req, res) => {
   const section = new Section({
-    nom: req.body.name,
-    contenu: req.body.textContent,
+    name: req.body.name,
+    textContent: req.body.textContent,
   });
   try {
     const newSection = await section.save();

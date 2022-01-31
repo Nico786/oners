@@ -10,8 +10,10 @@ import PostIcon from "@material-ui/icons/Book";
 import UserIcon from "@material-ui/icons/Group";
 import { ListGuesser, EditGuesser } from "react-admin";
 import { fetchJson as httpClient } from "./httpClient";
-import { SectionList, SectionEdit } from "./sections";
-import { CacaList, CacaEdit } from "./cacas";
+import { SectionList, SectionEdit, SectionCreate } from "./sections";
+import { PersonnageList, PersonnageEdit, PersonnageCreate } from "./personnages";
+import { AuteurList, AuteurEdit, AuteurCreate} from "./auteurs";
+
 
 import "./Admin.css"
 
@@ -19,10 +21,9 @@ const dataProvider = myDataProvider("http://localhost:4000/api/v1", httpClient);
 
 const BackOffice = () => (
   <Admin dashboard={Dashboard} dataProvider={dataProvider}>
-    {
-      // <Resource name="sections" list={SectionList} edit={SectionEdit} />
-      <Resource name="cacas" list={CacaList} edit={CacaEdit} />
-    }
+    <Resource name="sections" list={SectionList} edit={SectionEdit} create={SectionCreate} />
+    <Resource name="personnages" list={PersonnageList} edit={PersonnageEdit} create={PersonnageCreate} />
+    <Resource name="auteurs" list={AuteurList} edit={AuteurEdit} create={AuteurCreate} />
   </Admin>
 );
 

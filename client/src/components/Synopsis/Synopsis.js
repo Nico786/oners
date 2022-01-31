@@ -13,7 +13,7 @@ import gasMaskImgx3 from "../../assets/img/Synopsis/gasMask@3x.png";
 
 const Synopsis = () => {
     const [sections, setSections] = useContext(SectionsContext);
-    const textSection = sections[1].contenu;
+    const textSection = sections[1].textContent;
 
     return (
         <section id="synopsis" className={styles.synopsisBg}>

@@ -15,7 +15,7 @@ import styles from "./Landing.module.css";
 
 const Landing = () => {
     const [sections, setSections] = useContext(SectionsContext);
-    const textSection = sections[0].contenu;
+    const textSection = sections[0].textContent;
 
     return (
         <section className={styles.landingBg} id="landing">
