@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 import './App.css';
 
 import { SectionsProvider } from './contexts/sectionsContext';
@@ -20,28 +20,30 @@ function App() {
 
   return (
     <>
-      <header>
-        {/* <NavBar /> */}
-      </header>
-      <main>
-        <Route exact path="/admin">
-          <Admin />
-        </Route>
-        <SectionsProvider>
-          <Landing />
-          <Synopsis />
-        </SectionsProvider>
-        <PersonnagesProvider>
-          <Personnages />
-        </PersonnagesProvider>
-        <AuteursProvider>
-          <Auteurs />
-        </AuteursProvider>
-        <Contact />
-      </main>
-      <footer>
-        <Footer />
-      </footer>
+      <Route exact path="/admin">
+        <Admin />
+      </Route>
+      <Route exact path="/">
+        <header>
+          <NavBar />
+        </header>
+        <main>
+          <SectionsProvider>
+            <Landing />
+            <Synopsis />
+          </SectionsProvider>
+          <PersonnagesProvider>
+            <Personnages />
+          </PersonnagesProvider>
+          <AuteursProvider>
+            <Auteurs />
+          </AuteursProvider>
+          <Contact />
+        </main>
+        <footer>
+          <Footer />
+        </footer>
+      </Route> 
     </>
   );
 }
