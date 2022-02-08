@@ -23,45 +23,43 @@ import {
 import RichTextInput from "ra-input-rich-text";
 import { useMediaQuery } from "@material-ui/core";
 
-const PersonnageName = ({ record }) => {
-  return <span>Personnage {record ? `"${record.nom}"` : ""}</span>;
+const AuteurName = ({ record }) => {
+  return <span>Auteur {record ? `"${record.nom}"` : ""}</span>;
 };
 
-const PersonnageFilters = [
+const AuteurFilters = [
   <TextInput source="q" label="Search" alwaysOn />,
   <ReferenceInput source="userId" label="User" reference="users" allowEmpty>
     <SelectInput optionText="name" />
   </ReferenceInput>,
 ];
 
-export const PersonnageList = (props) => (
+export const AuteurList = (props) => (
   <List {...props}>
     <Datagrid rowClick="edit">
-      <TextField source="id" />
       <TextField source="name" />
+      <TextField source="job" />
       <TextField source="description" />
-	  <TextField source="backgroundColorModal" />
     </Datagrid>
   </List>
 );
 
-export const PersonnageEdit = (props) => (
-  <Edit name={<PersonnageName />} {...props}>
+export const AuteurEdit = (props) => (
+  <Edit name={<AuteurName />} {...props}>
     <SimpleForm>
-      <TextInput disabled label="Id" source="id" />
       <TextInput source="name" validation={{ required: true }} />
+      <TextInput source="job" validation={{ required: true }} />
       <RichTextInput source="description" validation={{ required: true }} />
-	  <TextInput source="backgroundColorModal" validation={{ required: true }} />
     </SimpleForm>
   </Edit>
 );
 
-export const PersonnageCreate = (props) => (
+export const AuteurCreate = (props) => (
   <Create {...props}>
     <SimpleForm>
       <TextInput source="name" validation={{ required: true }} />
+      <TextInput source="job" validation={{ required: true }} />
       <RichTextInput source="description" validation={{ required: true }} />
-	  <TextInput source="backgroundColorModal" validation={{ required: true }} />
     </SimpleForm>
   </Create>
 );

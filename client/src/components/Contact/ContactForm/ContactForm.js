@@ -143,7 +143,6 @@ const ContactForm = (props) => {
                             type="submit"
                             value="Envoyer"
                             disabled={disabled}
-<<<<<<< HEAD
                             className={styles.formRow}
                             onClick={handleIsLoading}>
                             {isLoading ?
@@ -152,11 +151,6 @@ const ContactForm = (props) => {
                                 </Spinner>
                                 : "Envoyer"
                             }
-=======
-                            className={styles.formRow}>
-                            Envoyer
-                           
->>>>>>> ba34f67 (ajout admin)
                         </button>
                         
                     </Col>

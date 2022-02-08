@@ -28,7 +28,6 @@ const SectionFilters = [
 export const SectionList = (props) => (
   <List {...props}>
     <Datagrid rowClick="edit">
-      <TextField source="id" />
       <TextField source="name" />
       <TextField source="textContent" />
     </Datagrid>
@@ -38,7 +37,6 @@ export const SectionList = (props) => (
 export const SectionEdit = (props) => (
   <Edit name={<SectionName />} {...props}>
     <SimpleForm>
-      <TextInput disabled label="Id" source="id" />
       <TextInput source="name" validation={{ required: true }} />
       <RichTextInput source="textContent" validation={{ required: true }} />
     </SimpleForm>

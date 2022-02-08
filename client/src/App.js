@@ -21,7 +21,7 @@ function App() {
   return (
     <>
       <header>
-        <NavBar />
+        {/* <NavBar /> */}
       </header>
       <main>
         <Route exact path="/admin">
