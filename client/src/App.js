@@ -13,16 +13,17 @@ import Personnages from "./components/Personnages/Personnages";
 import Auteurs from "./components/Auteurs/Auteurs";
 import Contact from './components/Contact/Contact';
 import Footer from "./components/Footer/Footer";
+import LoginForm from "./components/Admin/admincomponents/LoginForm"
 import Admin from './components/Admin/Admin';
+import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute';
 
 
 function App() {
 
   return (
     <>
-      <Route exact path="/admin">
-        <Admin />
-      </Route>
+      <Route exact path="/adminlogin" component={LoginForm}/>
+      <ProtectedRoute exact path="/admin" component={Admin}/>
       <Route exact path="/">
         <header>
           <NavBar />

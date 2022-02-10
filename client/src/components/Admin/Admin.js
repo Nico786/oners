@@ -25,7 +25,7 @@ const BackOffice = () => (
     <Admin
       catchAll={Dashboard}
       dashboard={Dashboard}
-      authProvider={authProvider}
+ 
       dataProvider={dataProvider}
       history={history}
       loginPage={loginPage}

@@ -30,7 +30,7 @@ export const fetchJson = (url, options) => {
         requestHeaders['Content-Type'] = 'application/json';
     }
     
-    const token = localStorage.getItem('auth-token');
+    const token = localStorage.getItem('isAuthenticated');
     requestHeaders['Authorization'] = `JWT ${token}`;
     
 
