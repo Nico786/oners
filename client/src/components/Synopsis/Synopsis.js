@@ -12,6 +12,7 @@ import gasMaskImgx3 from "../../assets/img/Synopsis/gasMask@3x.png";
 
 
 const Synopsis = () => {
+    // eslint-disable-next-line
     const [sections, setSections] = useContext(SectionsContext);
     const textSection = sections[1].textContent;
 

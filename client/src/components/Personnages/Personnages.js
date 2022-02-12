@@ -12,6 +12,7 @@ import marqueursImg3x from '../../assets/img/Personnages/marqueurs.png';
 import styles from "./Personnages.module.css";
 
 const Personnages = () => {
+    // eslint-disable-next-line
     const [personnages, setPersonnages] = useContext(PersonnagesContext);
     const textPersonnages = personnages;
 
@@ -25,7 +26,7 @@ const Personnages = () => {
                     <Col>
                         <img
                             src={marqueursImg}
-                            srcSet={`${marqueursImg2x} 2x`, `${marqueursImg3x} 3x`}
+                            srcSet={`${marqueursImg2x} 2x , ${marqueursImg3x} 3x`}
                             alt="marqueurs dessins"
                             width="150"
                             id={styles.marqueurs}

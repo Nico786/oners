@@ -14,6 +14,7 @@ import persosImg3x from "../../assets/img/Landing/Persos/landing_group_perso_des
 import styles from "./Landing.module.css";
 
 const Landing = () => {
+    // eslint-disable-next-line
     const [sections, setSections] = useContext(SectionsContext);
     const textSection = sections[0].textContent;
 
@@ -26,7 +27,7 @@ const Landing = () => {
                             <Col className="text-center">
                                 <img
                                     src={logoOnersColor}
-                                    srcSet={`${logoOnersColor2x} 2x`, `${logoOnersColor3x} 3x`}
+                                    srcSet={`${logoOnersColor2x} 2x, ${logoOnersColor3x} 3x`}
                                     alt="logo Oners"
                                     className="img-fluid" />
                             </Col>
@@ -58,7 +59,7 @@ const Landing = () => {
                     <Col xs={{ span: 12, order: 1 }} lg={{ span: 7, order: 2 }} className="mt-4">
                         <img
                             src={persosImg}
-                            srcSet={`${persosImg2x} 2x`, `${persosImg3x} 3x`}
+                            srcSet={`${persosImg2x} 2x , ${persosImg3x} 3x`}
                             alt="personnages oners"
                             className="img-fluid"
                         />

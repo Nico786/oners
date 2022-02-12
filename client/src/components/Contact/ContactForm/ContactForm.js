@@ -29,7 +29,7 @@ const ContactForm = (props) => {
         script.src = "https://www.google.com/recaptcha/api.js";
         window.onsubmit = () => { handleDisabled() }
         document.body.appendChild(script)
-    }, [])
+    })
 
     const toastifySuccess = () => {
         toast.success('Message envoyé !', {
@@ -141,9 +141,7 @@ const ContactForm = (props) => {
                             disabled={disabled}
                             className={styles.formRow}>
                             Envoyer
-                           
                         </button>
-                        
                     </Col>
                 </Row>
             </form>

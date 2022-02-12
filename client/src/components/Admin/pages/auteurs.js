@@ -3,36 +3,16 @@ import {
   List,
   Datagrid,
   TextField,
-  ReferenceField,
-  EditButton,
   Edit,
   Create,
   SimpleForm,
-  ReferenceInput,
-  SelectInput,
-  TextInput,
-  SimpleList,
-  ArrayInput,
-  SimpleFormIterator,
-  DateInput,
-  required,
-  ReferenceManyField,
-  DateField,
+  TextInput
 } from "react-admin";
-
 import RichTextInput from "ra-input-rich-text";
-import { useMediaQuery } from "@material-ui/core";
 
 const AuteurName = ({ record }) => {
   return <span>Auteur {record ? `"${record.nom}"` : ""}</span>;
 };
-
-const AuteurFilters = [
-  <TextInput source="q" label="Search" alwaysOn />,
-  <ReferenceInput source="userId" label="User" reference="users" allowEmpty>
-    <SelectInput optionText="name" />
-  </ReferenceInput>,
-];
 
 export const AuteurList = (props) => (
   <List {...props}>

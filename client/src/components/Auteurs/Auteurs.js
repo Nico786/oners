@@ -6,6 +6,7 @@ import FicheAuteur from "./FicheAuteur/FicheAuteur";
 import styles from "./Auteurs.module.css";
 
 const Auteurs = (props) => {
+    // eslint-disable-next-line
     const [auteurs, setAuteurs] = useContext(AuteursContext);
     const textAuteur = auteurs;
 
