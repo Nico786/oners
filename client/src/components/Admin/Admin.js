@@ -10,8 +10,6 @@ import { AuteurList, AuteurEdit, AuteurCreate } from "./pages/auteurs";
 import loginPage from "./pages/login";
 import Dashboard from "./admincomponents/Dashboard";
 
-import authProvider from "./utils/authProvider";
-
 import { createBrowserHistory as createHistory } from "history";
 import "./Admin.css";
 
@@ -25,7 +23,6 @@ const BackOffice = () => (
     <Admin
       catchAll={Dashboard}
       dashboard={Dashboard}
- 
       dataProvider={dataProvider}
       history={history}
       loginPage={loginPage}
