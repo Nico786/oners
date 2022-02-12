@@ -25,7 +25,7 @@ const Synopsis = () => {
                         <Row>
                             <Col>
                                 {
-                                    parse(textSection)
+                                    parse(`${textSection}`)
                                 }
                             </Col>
                         </Row>

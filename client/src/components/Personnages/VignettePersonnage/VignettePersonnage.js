@@ -48,9 +48,9 @@ const VignettePersonnage = ({ name, description, backgroundColorModal }) => {
                 <Row className="align-items-center">
                     <Col xs={12} sm={8} className={styles.customModal}>
                         <span id={name}>{name}</span>
-                        <p id={description}  className="my-md-5">
+                        <div id={description}  className="my-md-5">
                             {description}
-                        </p>
+                        </div>
                         <img
                             src={require(`../../../assets/img/Personnages/graf/${name}.png`).default}
                             className="img-fluid mx-auto"

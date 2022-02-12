@@ -40,7 +40,7 @@ const Personnages = () => {
                                 <Col key={personnage._id} sm={12} lg={4} className="my-2">
                                     <VignettePersonnage
                                         name={personnage.name}
-                                        description={parse(personnage.description)}
+                                        description={parse(`${personnage.description}`)}
                                         backgroundColorModal={personnage.backgroundColorModal}
                                     />
                                 </Col>

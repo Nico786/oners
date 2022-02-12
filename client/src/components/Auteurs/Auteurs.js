@@ -2,6 +2,7 @@ import { React, useContext } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { AuteursContext } from "../../contexts/auteursContext";
 import FicheAuteur from "./FicheAuteur/FicheAuteur";
+import parse from 'html-react-parser';
 
 import styles from "./Auteurs.module.css";
 
@@ -26,7 +27,7 @@ const Auteurs = (props) => {
                                     <FicheAuteur
                                         name={auteur.name}
                                         job={auteur.job}
-                                        description={auteur.description} />
+                                        description={parse(`${auteur.description}`)} />
                                 </Col>
                             )
                         })
