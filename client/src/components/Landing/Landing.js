@@ -17,7 +17,6 @@ const Landing = () => {
     // eslint-disable-next-line
     const [sections, setSections] = useContext(SectionsContext);
     const textSection = sections[0].textContent;
-    const content = parse(`${textSection}`);
 
     return (
         <section className={styles.landingBg} id="landing">
@@ -52,7 +51,9 @@ const Landing = () => {
                             </Col>
                         </Row>
                         <Row >
-                            {content}
+                            {
+                                parse(textSection)
+                            }
                         </Row>
                     </Col>
                     <Col xs={{ span: 12, order: 1 }} lg={{ span: 7, order: 2 }} className="mt-4">

@@ -8,7 +8,7 @@ const NavBar = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <Navbar collapseOnSelect fixed="top" expand="lg" className={styles.navBar}>
+        <Navbar collapseOnSelect variant="dark" fixed="top" expand="lg" className={styles.navBar}>
             <Container>
                 <Row className={styles.rowLogos}>
                     <Col sm={12} lg={4} xl={6}>
