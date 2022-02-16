@@ -14,6 +14,15 @@ footer ul{
     justify-content: flex-end;
 }
 
+@media only screen and (max-width: 576px){
+    footer{
+        height:fit-content
+    }
+    footer ul{
+        margin-bottom:1em;
+    }
+}
+
 @media only screen and (max-width: 992px){
     footer ul{
         justify-content: space-between;
