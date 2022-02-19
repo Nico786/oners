@@ -23,7 +23,7 @@ const LoginAdmin = (props) => {
             setErrorMessage((prevState) => ({
                 value: "Veuillez remplir les 2 champs"
             }))
-        } else if (userData.email.toLowerCase() === process.env.REACT_APP_ADMIN_ADRESS && userData.password.toLowerCase() === process.env.REACT_APP_ADMIN_PWD) {
+        } else if (userData.email.toLowerCase() === process.env.REACT_APP_ADMIN_ADRESS && userData.password === process.env.REACT_APP_ADMIN_PWD) {
             //success
             localStorage.setItem("isAuthenticated", "true");
             window.location.pathname = '/admin'
