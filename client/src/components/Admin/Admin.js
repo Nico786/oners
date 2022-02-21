@@ -16,7 +16,7 @@ import "./Admin.css";
 const history = createHistory();
 
 
-const dataProvider = myDataProvider("http://localhost:4000/api/v1", httpClient);
+const dataProvider = myDataProvider("/api/v1", httpClient);
 
 const BackOffice = () => (
   <>

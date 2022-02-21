@@ -17,7 +17,6 @@ const PersonnageName = ({ record }) => {
 export const PersonnageList = (props) => (
   <List {...props}>
     <Datagrid rowClick="edit">
-      <TextField source="id" />
       <TextField source="name" />
       <TextField source="description" />
 	  <TextField source="backgroundColorModal" />

@@ -17,7 +17,6 @@ const SectionName = ({ record }) => {
 export const SectionList = (props) => (
   <List {...props}>
     <Datagrid rowClick="edit">
-      <TextField source="id" />
       <TextField source="name" />
       <TextField source="textContent" />
     </Datagrid>

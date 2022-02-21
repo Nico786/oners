@@ -5,9 +5,7 @@ import { useForm } from "react-hook-form";
 import emailjs from 'emailjs-com';
 import { init } from '@emailjs/browser';
 import { ToastContainer, toast } from 'react-toastify';
-
 import 'react-toastify/dist/ReactToastify.min.css';
-import styles from "./ContactForm.module.css"
 
 const dotenv = require("dotenv");
 dotenv.config();
@@ -21,10 +19,12 @@ const ContactForm = (props) => {
     const form = useRef();
 
     const handleDisabled = () => {
-        setDisabled(!disabled)
+        setDisabled(!disabled);
+        if(!errors) setDisabled(false);
     }
     const handleIsLoading = () =>{
-        setIsLoading(!isLoading)
+        setIsLoading(!isLoading);
+        if(errors) setIsLoading(false);
     }
 
     useEffect(() => {
@@ -68,7 +68,7 @@ const ContactForm = (props) => {
                 <Row>
                     <Col>
                         <input
-                            className={styles.formRow}
+                            className="formRow"
                             type="email"
                             name="email"
                             placeholder="Email"
@@ -79,7 +79,7 @@ const ContactForm = (props) => {
                         />
                         {
                             errors.email &&
-                            <span className={styles.errorMessage}>
+                            <span>
                                 {errors.email.message}
                             </span>
                         }
@@ -88,7 +88,7 @@ const ContactForm = (props) => {
                 <Row>
                     <Col>
                         <input
-                            className={styles.formRow}
+                            className="formRow"
                             type="text"
                             name="subject"
                             placeholder="Sujet"
@@ -98,7 +98,7 @@ const ContactForm = (props) => {
                         />
                         {
                             errors.subject &&
-                            <span className={styles.errorMessage}>
+                            <span>
                                 {errors.subject.message}
                             </span>
                         }
@@ -108,7 +108,7 @@ const ContactForm = (props) => {
                 <Row>
                     <Col>
                         <textarea
-                            className={styles.formRow}
+                            className="formRow"
                             type="text"
                             name="message"
                             placeholder="Votre message"
@@ -124,7 +124,7 @@ const ContactForm = (props) => {
                         </textarea>
                         {
                             errors.message &&
-                            <span className={styles.errorMessage}>
+                            <span>
                                 {errors.message.message}
                             </span>
                         }
@@ -143,7 +143,7 @@ const ContactForm = (props) => {
                             type="submit"
                             value="Envoyer"
                             disabled={disabled}
-                            className={styles.formRow}
+                            className="formRow"
                             onClick={handleIsLoading}>
                             {isLoading ?
                                 <Spinner animation="border" role="status">
